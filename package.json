@@ -4,6 +4,8 @@
   "version": "4.0.0",
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
+    "@tailwindcss/ui": "^0.6.2",
+    "add": "^2.0.6",
     "gatsby": "2.24.58",
     "gatsby-plugin-manifest": "2.4.29",
     "gatsby-plugin-offline": "3.2.27",
