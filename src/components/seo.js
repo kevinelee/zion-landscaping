@@ -23,6 +23,12 @@ function SEO({ description, lang, meta, keywords, title }) {
       htmlAttributes={{
         lang,
       }}
+      link={[
+        {
+          rel: "stylesheet",
+          href: "https://rsms.me/inter/inter.css",
+        },
+      ]}
       meta={[
         {
           name: `description`,

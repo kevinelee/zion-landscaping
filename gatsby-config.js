@@ -5,13 +5,15 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `Zion Landscaping`,
+    description: `Expert Landscaping services in LA/OC`,
+    author: `Kevin Lee`,
   },
   plugins: [
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
