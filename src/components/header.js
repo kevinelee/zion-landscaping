@@ -29,13 +29,13 @@ function Header() {
         </Link>
 
         <button
-          className="items-center block px-3 py-2 text-white border border-black  rounded md:hidden"
+          className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           {isExpanded ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-3 h-3 fill-current"
+              className="w-3 h-3 fill-current hover:fill-current"
               viewBox="0 0 24 24"
               fill="white"
             >
