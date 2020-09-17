@@ -35,7 +35,7 @@ function Header() {
           {isExpanded ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-3 h-3 fill-current hover:fill-current"
+              className="w-3 h-3 fill-current hover:fill-0"
               viewBox="0 0 24 24"
               fill="white"
             >
@@ -60,6 +60,7 @@ function Header() {
         >
           {[
             {
+
               route: `/about`,
               title: `About`,
             },
@@ -70,7 +71,7 @@ function Header() {
             { route: "/about", title: "Gardening" },
           ].map((link) => (
             <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 text-white hover:text-gray-400 no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
               to={link.route}
             >
