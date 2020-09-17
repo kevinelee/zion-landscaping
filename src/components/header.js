@@ -14,8 +14,8 @@ function Header() {
   `);
 
   return (
-    <header className="bg-gray-800">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
+    <header className="bg-gray-800 sticky relative">
+      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8 absolute sticky">
         <Link to="/">
           <h1 className="flex items-center text-white no-underline">
             <img
@@ -29,21 +29,13 @@ function Header() {
         </Link>
 
         <button
-          className="items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
-          {/* <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg> */}
           {isExpanded ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-3 h-3 fill-current"
+              className="w-3 h-3 fill-current hover:fill-0"
               viewBox="0 0 24 24"
               fill="white"
             >
@@ -68,6 +60,7 @@ function Header() {
         >
           {[
             {
+
               route: `/about`,
               title: `About`,
             },
@@ -78,7 +71,7 @@ function Header() {
             { route: "/about", title: "Gardening" },
           ].map((link) => (
             <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 text-white hover:text-gray-400 no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
               to={link.route}
             >

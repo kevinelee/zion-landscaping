@@ -2,6 +2,8 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import TwoByTwo from "../components/two-by-two";
+import Carousel from "../components/better-carousel";
 
 function IndexPage() {
   return (
@@ -10,8 +12,12 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
+      <React.StrictMode>
+        <Carousel />
+      </React.StrictMode>
 
-      <section className="text-center">
+      <TwoByTwo />
+      {/* <section className="text-center">
         <div className="bg-gray-100">
           <div className="pt-12 sm:pt-16 lg:pt-20">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,7 +171,7 @@ function IndexPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 }
