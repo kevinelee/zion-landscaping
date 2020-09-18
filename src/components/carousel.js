@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../css/style.css";
 
-export default (props) => {
+export default function CarouselArrows() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
@@ -16,12 +17,12 @@ export default (props) => {
     <>
       <div className="navigation-wrapper ">
         <div ref={sliderRef} className="keen-slider min-w-full">
-          <div className="keen-slider__slide number-slide1">One</div>
-          <div className="keen-slider__slide number-slide2">Two</div>
-          <div className="keen-slider__slide number-slide3">Three</div>
-          <div className="keen-slider__slide number-slide4">Four</div>
-          <div className="keen-slider__slide number-slide5">Five</div>
-          <div className="keen-slider__slide number-slide6">Six</div>
+          <div className="keen-slider__slide number-slide1"></div>
+          <div className="keen-slider__slide number-slide2"></div>
+          <div className="keen-slider__slide number-slide3"></div>
+          <div className="keen-slider__slide number-slide4"></div>
+          <div className="keen-slider__slide number-slide5"></div>
+          <div className="keen-slider__slide number-slide6"></div>
         </div>
         {slider && (
           <>
@@ -54,7 +55,7 @@ export default (props) => {
       )}
     </>
   );
-};
+}
 
 function ArrowLeft(props) {
   const disabled = props.disabled ? " arrow--disabled" : "";
