@@ -8,12 +8,12 @@ function Carousel() {
 
   return (
     <div ref={sliderRef} className="keen-slider">
-      <div className="keen-slider__slide number-slide1">One</div>
-      <div className="keen-slider__slide number-slide2">Two</div>
-      <div className="keen-slider__slide number-slide3">Three</div>
-      <div className="keen-slider__slide number-slide4">Four</div>
-      <div className="keen-slider__slide number-slide5">Five</div>
-      <div className="keen-slider__slide number-slide6">Six</div>
+      <div className="keen-slider__slide number-slide1"></div>
+      <div className="keen-slider__slide number-slide2"></div>
+      <div className="keen-slider__slide number-slide3"></div>
+      <div className="keen-slider__slide number-slide4"></div>
+      <div className="keen-slider__slide number-slide5"></div>
+      <div className="keen-slider__slide number-slide6"></div>
     </div>
   );
 }
