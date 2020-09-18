@@ -39,7 +39,7 @@ export default function CarouselArrows() {
         )}
       </div>
       {slider && (
-        <div className="dots">
+        <div className="dots bg-gray-50">
           {[...Array(slider.details().size).keys()].map((idx) => {
             return (
               <button

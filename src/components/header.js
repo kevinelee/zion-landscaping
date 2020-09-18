@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <header className="bg-gray-800 sticky relative">
-      <div className="flex flex-wrap items-center  justify-between md:justify-start max-w-6xl p-4 mx-auto md:px-8 absolute sticky">
+      <div className="flex flex-wrap items-center  justify-between md:justify-start p-4 mx-auto md:px-8 absolute sticky">
         <button
           className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
@@ -77,7 +77,6 @@ function Header() {
           ].map((link) => (
             <Link
               className="block mt-4 text-white hover:text-gray-400 no-underline md:inline-block md:mt-0 md:ml-4 font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out rounded-md text-base px-3 py-2 "
-              className2="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
               key={link.title}
               to={link.route}
             >
