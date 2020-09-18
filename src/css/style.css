@@ -18,25 +18,29 @@
 }
 
 .number-slide1 {
-  background: rgb(64, 175, 255);
+  /* background: rgb(64, 175, 255);
   background: linear-gradient(
     128deg,
     rgba(64, 175, 255, 1) 0%,
     rgba(63, 97, 255, 1) 100%
-  );
+  ); */
+  background-image: url("https://www.olympiclandscape.com/wp-content/uploads/walls-stone-work-01.jpg");
+  background-size: cover;
 }
 
 .number-slide2 {
-  background: rgb(255, 75, 64);
+  /* background: rgb(255, 75, 64);
   background: linear-gradient(
     128deg,
     rgba(255, 154, 63, 1) 0%,
     rgba(255, 75, 64, 1) 100%
-  );
+  ); */
+  background-image: url("https://i.pinimg.com/originals/46/77/8b/46778bbb1eb15ebcc1972b05482478fa.jpg");
+  background-size: cover;
 }
 
 .number-slide3 {
-  background: rgb(182, 255, 64);
+  /* background: rgb(182, 255, 64);
   background: linear-gradient(
     128deg,
     rgba(182, 255, 64, 1) 0%,
@@ -46,31 +50,38 @@
     128deg,
     rgba(189, 255, 83, 1) 0%,
     rgba(43, 250, 82, 1) 100%
-  );
+  ); */
+  background-image: url("https://www.etlandscapingconstruction.com/wordpress/wp-content/uploads/slider-2.jpg");
+  background-size: cover;
 }
 
 .number-slide4 {
-  background: rgb(64, 255, 242);
+  /* background: rgb(64, 255, 242);
   background: linear-gradient(
     128deg,
     rgba(64, 255, 242, 1) 0%,
     rgba(63, 188, 255, 1) 100%
-  );
+  ); */background-image: url("https://www.thespruce.com/thmb/LYwVAw--XXq2lg1wHP-3ynbnqTg=/1500x998/filters:no_upscale():max_bytes(150000):strip_icc()/Fulhamtomhoward-5b5cafb346e0fb002c69c824.jpg");
+  background-size: cover;
 }
 
 .number-slide5 {
-  background: rgb(255, 64, 156);
+  /* background: rgb(255, 64, 156);
   background: linear-gradient(
     128deg,
     rgba(255, 64, 156, 1) 0%,
     rgba(255, 63, 63, 1) 100%
-  );
+  ); */
+  background-image: url("https://www.qualitycompaniesinc.com/images/mainlayerslider/Landscape-Lighting.jpg");
+  background-size: cover;
 }
 .number-slide6 {
-  background: rgb(64, 76, 255);
+  /* background: rgb(64, 76, 255);
   background: linear-gradient(
     128deg,
     rgba(64, 76, 255, 1) 0%,
     rgba(174, 63, 255, 1) 100%
-  );
+  ); */
+  background-image: url("https://media.angieslist.com/s3fs-public/styles/widescreen_large/s3/s3fs-public/1747090_1_0.jpg?itok=rCd4g9hj");
+  background-size: cover;
 }
