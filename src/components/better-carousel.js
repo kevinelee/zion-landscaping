@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../css/style.css";
 
-function Carousel() {
+export default function Carousel() {
   const [sliderRef] = useKeenSlider();
 
   return (
@@ -17,5 +17,3 @@ function Carousel() {
     </div>
   );
 }
-
-export default Carousel;
