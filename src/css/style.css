@@ -13,8 +13,8 @@
   font-size: 50px;
   color: #fff;
   font-weight: 500;
-  height: 700px;
-  max-height: 100vh;
+  /* height: 700px; */
+  max-height: 90vh;
 }
 
 .number-slide1 {

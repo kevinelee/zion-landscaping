@@ -4,7 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../css/style.css";
 
-export default function CarouselArrows() {
+export default function Carousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
@@ -16,7 +16,7 @@ export default function CarouselArrows() {
   return (
     <>
       <div className="navigation-wrapper ">
-        <div ref={sliderRef} className="keen-slider min-w-full">
+        <div ref={sliderRef} className="keen-slider min-w-full h-96">
           <div className="keen-slider__slide number-slide1"></div>
           <div className="keen-slider__slide number-slide2"></div>
           <div className="keen-slider__slide number-slide3"></div>

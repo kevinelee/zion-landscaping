@@ -5,7 +5,8 @@ import SEO from "../components/seo";
 import TwoByTwo from "../components/two-by-two";
 // import BetterCarousel from "../components/better-carousel";
 import AboutUs from "../components/about-us";
-import CarouselArrows from "../components/carousel";
+import Carousel from "../components/carousel";
+import ExceptionalService from "../components/exceptional-services";
 
 function IndexPage() {
   return (
@@ -15,10 +16,11 @@ function IndexPage() {
         title="Home"
       />
 
-        <CarouselArrows />
+        <Carousel />
 
       <AboutUs />
       <TwoByTwo />
+      <ExceptionalService/>
     </Layout>
   );
 }
