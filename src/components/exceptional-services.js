@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ExceptionalService() {
   return (
-    <section className="flex flex-col md:flex-row justify-center py-8 ">
-      <div className="max-w-sm rounded overflow-hidden mx-2 border-4 border-gray-200">
+    <section className="flex flex-col lg:flex-row justify-center py-8 ">
+      <div className="lg:lg:max-w-sm rounded overflow-hidden mx-2 border-4 border-gray-200 my-3 lg:mb-0">
         <div className="px-6 py-4 text-3xl">
           <h1 className="border-b">
             Exceptional
@@ -23,7 +23,7 @@ export default function ExceptionalService() {
           </p>
         </div>
       </div>
-      <div className="max-w-sm rounded overflow-hidden mx-2">
+      <div className="lg:max-w-sm rounded overflow-hidden mx-2 my-3 lg:mb-0">
         <img
           className="w-full"
           src="https://demos.qreativethemes.com/thelandscaper/wp-content/uploads/sites/2/2015/07/trimming_hedge.jpg"
@@ -38,7 +38,7 @@ export default function ExceptionalService() {
           </p>
         </div>
       </div>
-      <div className="max-w-sm rounded overflow-hidden mx-2">
+      <div className="lg:max-w-sm rounded overflow-hidden mx-2 my-3 lg:mb-0">
         <img
           className="w-full"
           src="https://demos.qreativethemes.com/thelandscaper/wp-content/uploads/sites/2/2015/07/tree_removal.jpg"
@@ -53,7 +53,7 @@ export default function ExceptionalService() {
           </p>
         </div>
       </div>
-      <div className="max-w-sm rounded overflow-hidden mx-2">
+      <div className="lg:max-w-sm rounded overflow-hidden mx-2 my-3 lg:mb-0">
         <img
           className="w-full"
           src="https://demos.qreativethemes.com/thelandscaper/wp-content/uploads/sites/2/2015/07/irrigation.jpg"
