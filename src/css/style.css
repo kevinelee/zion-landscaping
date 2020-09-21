@@ -130,11 +130,19 @@
   left: 5px;
 }
 
-.arrow--right {
+.arrow--right {   
   left: auto;
   right: 5px;
-}
+} 
 
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
+}
+
+.green-banner{
+  background-image: url("https://previews.123rf.com/images/vicushka/vicushka1603/vicushka160300019/54155041-gardening-background-with-garden-tolls-and-garden-flowers-plant-on-gray-stone-background-top-view-pl.jpg");
+  object-fit: cover;
+  opacity: .15;
+  background-repeat: no-repeat;
+  
 }
