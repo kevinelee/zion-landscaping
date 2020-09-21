@@ -8,6 +8,7 @@ import Carousel from "../components/carousel";
 import ExceptionalService from "../components/exceptional-services";
 import WhyChooseUs from "../components/why-choose-us";
 import AreYouTired from "../components/are-you-tired";
+import Testimonials from "../components/testimonials"
 
 function IndexPage() {
   return (
@@ -21,6 +22,7 @@ function IndexPage() {
       <WhyChooseUs />
       <AreYouTired />
       <ExceptionalService />
+      <Testimonials/>
     </Layout>
   );
 }
