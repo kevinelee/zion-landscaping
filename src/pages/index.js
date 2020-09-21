@@ -7,6 +7,7 @@ import TwoByTwo from "../components/two-by-two";
 import AboutUs from "../components/about-us";
 import Carousel from "../components/carousel";
 import ExceptionalService from "../components/exceptional-services";
+import WhyChooseUs from "../components/why-choose-us";
 
 function IndexPage() {
   return (
@@ -15,12 +16,11 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-
-        <Carousel />
-
+      <Carousel />
       <AboutUs />
       <TwoByTwo />
-      <ExceptionalService/>
+      <ExceptionalService />
+      <WhyChooseUs/>
     </Layout>
   );
 }
