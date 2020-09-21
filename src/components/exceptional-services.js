@@ -8,7 +8,7 @@ export default function ExceptionalService() {
           <h1 className="border-b">
             Exceptional
             <br />
-            <span className="text-green-200">Services We Offer</span>
+            <span className="text-green-300">Services We Offer</span>
           </h1>
         </div>
         <div className="px-6 py-4">
