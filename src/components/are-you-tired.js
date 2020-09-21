@@ -2,7 +2,8 @@ import React from "react";
 
 export default function AreYouTired() {
   return (
-    <section className="flex justify-center align-center bg-gray-50 green-banner">
+    <section className="flex justify-center align-center bg-gray-200">
+      {/* <div className="green-banner">DONDE ARE YOU</div>   */}
       <div className="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
           Are you tired of spending hours doing the work yourself?
