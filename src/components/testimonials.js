@@ -11,7 +11,7 @@ export default function Testimonials() {
               height="40"
               viewBox="0 0 105 40"
               role="img"
-              ariaLabelledby="svg-tuple"
+              // ariaLabelledby="svg-tuple"
             >
               <title id="svg-tuple">Tuple</title>
               <path
@@ -79,7 +79,7 @@ export default function Testimonials() {
               height="40"
               viewBox="0 0 180 40"
               role="img"
-              ariaLabelledby="svg-workcation"
+              // ariaLabelledby="svg-workcation"
             >
               <title id="svg-workcation">Workcation</title>
               <path
