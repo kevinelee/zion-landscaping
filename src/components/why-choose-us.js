@@ -45,7 +45,7 @@ function twoByTwo() {
           </div>
           <div className="mt-10 sm:grid sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 lg:col-span-2">
             <div>
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
                 {/* <!-- Heroicon name: globe-alt --> */}
                 <svg
                   className="h-6 w-6"
@@ -65,14 +65,14 @@ function twoByTwo() {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Specialized Company
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-400">
                   We are a landscaping company that specializes in residential
                   and commercial landscaping
                 </p>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
                 {/* <!-- Heroicon name: scale --> */}
                 <svg
                   className="h-6 w-6"
@@ -92,14 +92,14 @@ function twoByTwo() {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Licensed & Insured
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-400">
                   All our landscapers are fully licensed, bonded and insured for
                   their safety
                 </p>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
                 {/* <!-- Heroicon name: lightning-bolt --> */}
                 <svg
                   className="h-6 w-6"
@@ -119,14 +119,14 @@ function twoByTwo() {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Dependable Services
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-400">
                   We love to take pride in the work we do. Each project is
                   finished in time and budget
                 </p>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
                 {/* <!-- Heroicon name: mail --> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -147,14 +147,14 @@ function twoByTwo() {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Day Scheduling
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-400">
                   We schedule regular appointments to visit your property on the
                   same day and time of the week
                 </p>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
                 {/* <!-- Heroicon name: mail --> */}
                 {/* <svg
                     className="h-6 w-6"
@@ -188,14 +188,14 @@ function twoByTwo() {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Free Consultations
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-400">
                   We offer free consultations for our services, and will provide
                   you with an actual quote
                 </p>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
                 {/* <!-- Heroicon name: mail --> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +216,7 @@ function twoByTwo() {
                 <h4 className="text-lg leading-6 font-medium text-gray-900">
                   Reputable Company
                 </h4>
-                <p className="mt-2 text-base leading-6 text-gray-500">
+                <p className="mt-2 text-base leading-6 text-gray-400">
                   Operating for more than 30 years, earning a repuation for
                   service and beautiful work
                 </p>
