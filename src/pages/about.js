@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import dogIllustration from "../images/dog-illustration.svg";
 
+
 function AboutPage() {
   return (
     <Layout>
@@ -17,6 +18,8 @@ function AboutPage() {
           <blockquote className="pl-4 font-serif leading-loose text-justify border-l-4 border-gray-900">
 
           </blockquote>
+
+          
 
           <cite className="block mt-4 text-xs font-bold text-right uppercase">
             – Thomas Nagel

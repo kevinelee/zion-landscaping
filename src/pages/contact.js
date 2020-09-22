@@ -2,6 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Form from "../components/form"
 
 function ContactPage() {
   return (
@@ -10,8 +11,10 @@ function ContactPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Contact"
       />
-      <section>
-        <form className="mx-auto md:w-1/2">
+      <section className="px-4 py-8">
+        <h1 className="text-center">Contact us!</h1>
+        <Form/>
+        {/* <form className="mx-auto md:w-1/2">
           <p className="mb-8 leading-loose">
             Here is an example of a form built using the official Tailwind CSS
             Custom Forms plugin.{` `}
@@ -71,7 +74,7 @@ function ContactPage() {
           <button className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600">
             Submit
           </button>
-        </form>
+        </form> */}
       </section>
     </Layout>
   );
