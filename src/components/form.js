@@ -30,7 +30,11 @@ export default function Form() {
       <input name="phoneNumber" ref={register({ required: true })} />
       {errors.phoneNumber && <p>This field is required</p>} 
 
-      <input type="submit" />
+      <label>Inquiry</label>
+      <textarea name="inquiry" ref={register({ required: true })} />
+      {errors.inquiry && <p>This field is required</p>} 
+
+      <input className="bg-green-600 hover:bg-green-500" type="submit" /> 
     </form>
   );
 }

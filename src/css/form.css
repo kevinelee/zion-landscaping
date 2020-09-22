@@ -2,14 +2,14 @@ form {
   max-width: 500px;
   margin: 0 auto;
 }
-
+/* 
 h1 {
   font-weight: 100;
   color: white;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 1px solid rgb(79, 98, 148);
-}
+} */
 
 .form {
   background: #0e101c;
@@ -17,16 +17,16 @@ h1 {
   margin: 0 auto;
 }
 
-p {
+form > p {
   color: #bf1650;
 }
 
-p::before {
+form > p::before {
   display: inline;
   content: "⚠ ";
 }
 
-input {
+input, textarea {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -48,8 +48,8 @@ label {
   font-weight: 200;
 }
 
-button[type="submit"],
-input[type="submit"] {
+form > button[type="submit"],
+form > input[type="submit"] {
   /* background: #ec5990;   */
   color: white
   ;
@@ -67,9 +67,9 @@ input[type="submit"]:hover {
   background: #bf1650;
 } */
 
-button[type="submit"]:active,
-input[type="button"]:active,
-input[type="submit"]:active {
+form > button[type="submit"]:active,
+form > input[type="button"]:active,
+form > input[type="submit"]:active {
   transition: 0.3s all;
   transform: translateY(3px);
   border: 1px solid transparent;
@@ -110,7 +110,7 @@ hr {
   margin-top: 30px;
 }
 
-button {
+form > button {
   display: block;
   appearance: none;
   margin-top: 40px;
