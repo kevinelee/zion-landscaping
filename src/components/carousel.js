@@ -11,6 +11,7 @@ export default function Carousel() {
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
     },
+    loop: true
   });
 
   return (
