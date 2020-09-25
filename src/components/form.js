@@ -11,6 +11,28 @@ export default function Form() {
 
   console.log(watch("example")); // you can watch individual input by pass the name of the input
 
+  // if (typeof input["phone"] !== "undefined") {
+
+         
+
+  //   let pattern = new RegExp(/^[0-9\b]+$/);
+  
+  //   if (!pattern.test(input["phone"])) {
+  
+  //     isValid = false;
+  
+  //     errors["phone"] = "Please enter only number.";
+  
+  //   }else if(input["phone"].length != 10){
+  
+  //     isValid = false;
+  
+  //     errors["phone"] = "Please enter valid phone number.";
+  
+  //   }
+  
+  // }
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
 

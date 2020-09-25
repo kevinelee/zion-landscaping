@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <header className="bg-gray-800 sticky relative">
-      <div className="flex flex-wrap items-center  justify-between md:justify-start p-4 mx-auto md:px-8 absolute sticky">
+      <div className="flex flex-wrap items-center  justify-between  max-w-7xl md:justify-start p-4 mx-auto md:px-8 absolute sticky">
         <button
           className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}

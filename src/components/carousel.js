@@ -17,7 +17,7 @@ export default function Carousel() {
   return (
     <>
       <div className="navigation-wrapper ">
-        <div ref={sliderRef} className="keen-slider min-w-full h-96">
+        <div ref={sliderRef} className="keen-slider min-w-full h-96 lg:height80vh">
           <div className="keen-slider__slide number-slide1"></div>
           <div className="keen-slider__slide number-slide2"></div>
           <div className="keen-slider__slide number-slide3"></div>
