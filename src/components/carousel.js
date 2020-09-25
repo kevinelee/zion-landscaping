@@ -3,6 +3,7 @@ import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../css/style.css";
+import Hero from "../components/hero";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -11,19 +12,31 @@ export default function Carousel() {
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
     },
-    loop: true
+    loop: true,
   });
 
   return (
     <>
       <div className="navigation-wrapper ">
-        <div ref={sliderRef} className="keen-slider min-w-full h-96 lg:height80vh">
-          <div className="keen-slider__slide number-slide1"></div>
-          <div className="keen-slider__slide number-slide2"></div>
-          <div className="keen-slider__slide number-slide3"></div>
-          <div className="keen-slider__slide number-slide4"></div>
+        <div
+          ref={sliderRef}
+          className="keen-slider min-w-full h-96 lg:height80vh"
+        >
+          <div className="keen-slider__slide number-slide1">
+            <Hero
+              firstLine="Do you like what you see?"
+              secondLine="Give us a call!"
+            />
+          </div>
+          <div className="keen-slider__slide number-slide2">
+            <Hero firstLine="Please." secondLine="Give us a call!" />
+          </div>
+          <div className="keen-slider__slide number-slide3">
+            <Hero firstLine="We're begging you!" secondLine="Give us a call!" />
+          </div>
+          {/* <div className="keen-slider__slide number-slide4"></div>
           <div className="keen-slider__slide number-slide5"></div>
-          <div className="keen-slider__slide number-slide6"></div>
+          <div className="keen-slider__slide number-slide6"></div> */}
         </div>
         {slider && (
           <>
