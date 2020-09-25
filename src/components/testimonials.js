@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from "react";
 
-export default function Testimonials(){
-
+function Testimonials() {
   const testimonials = [
     {
       name: "Jimothy Butler",
@@ -19,7 +18,42 @@ export default function Testimonials(){
         "Aenean commodo euismod tellus, id vehicula arcu vestibulum vitae. Cras tempor tortor purus, in tincidunt justo molestie sed. Phasellus vel blandit lectus. Sed quis massa.",
     },
   ];
-  return(
-    <section></section>
-  )
+
+  const [testimonial, setTestimonial] = useState(testimonials[0]);
+
+  console.log(testimonials, "testimonials");
+  console.log(testimonial, "testimonial");
+
+  return (
+    <section className="bg-gray-50">
+      <div className="flex justify-center max-w-7xl h-96 mx-auto py-8">
+        {/* clickable names */}
+        <div
+          onClick={setTestimonial}
+          className="w-1/4 bg-gray-50 flex flex-col "
+        >
+          {/* <div className="h-32 flex justify-center items-center">THIS</div>
+        <div className="h-32 flex justify-center items-center">AND</div>
+        <div className="h-32 flex justify-center items-center">THAT</div> */}
+          {testimonials.map((testimonial) => {
+            return (
+              <div
+                key={testimonial.name}
+                className="h-32 flex justify-center items-center"
+              >
+                {testimonial.name}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* comment section */}
+        <div className="w-3/4 bg-green-500 flex justify-center items-center">
+          {testimonials[0].name}
+        </div>
+      </div>
+    </section>
+  );
 }
+
+export default Testimonials;
