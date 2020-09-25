@@ -1,14 +1,13 @@
 import React from "react";
 
-function Hero() {
+// eslint-disable-next-line react/prop-types
+const Hero = ({firstLine, secondLine}) => {
   return (
-    <div className="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8 inset-0 absolute">
-      <h2 className="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 text-white">
-        {/* {firstLine} */}
-        Are you tired of spending hours doing the work yourself?
+    <div className="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8 inset-0 absolute ">
+      <h2 className="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 text-white pt-16">
+        {firstLine}
         <br />
-        {/* {secondLine} */}
-        We can do it. And we can do it better.
+        {secondLine}
       </h2>
       <div className="mt-8 flex justify-center">
         <div className="inline-flex rounded-md shadow">
