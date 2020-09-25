@@ -3,12 +3,12 @@ import React from "react";
 export default function AreYouTired() {
   return (
     <section className="flex justify-center align-center bg-gray-200 h-96 md:h-72 relative">
-      <div className="green-banner w-screen"></div>  
+      <div className="green-banner w-screen"></div>
       <div className="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8 inset-0 absolute">
         <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
           Are you tired of spending hours doing the work yourself?
           <br />
-          We can do it.  And we can do it better.
+          We can do it. And we can do it better.
         </h2>
         <div className="mt-8 flex justify-center">
           <div className="inline-flex rounded-md shadow">
