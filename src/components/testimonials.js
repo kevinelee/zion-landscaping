@@ -29,17 +29,14 @@ function Testimonials() {
       <div className="flex justify-center max-w-7xl h-96 mx-auto py-8">
         {/* clickable names */}
         <div
-          onClick={setTestimonial}
-          className="w-1/4 bg-gray-50 flex flex-col "
+          className="w-1/4 flex flex-col "
         >
-          {/* <div className="h-32 flex justify-center items-center">THIS</div>
-        <div className="h-32 flex justify-center items-center">AND</div>
-        <div className="h-32 flex justify-center items-center">THAT</div> */}
           {testimonials.map((testimonial) => {
             return (
               <div
                 key={testimonial.name}
-                className="h-32 flex justify-center items-center"
+                onClick={()=>setTestimonial(testimonial)}
+                className="h-32 flex justify-center items-center border-2 m-2 hover:border-black"
               >
                 {testimonial.name}
               </div>
@@ -49,7 +46,7 @@ function Testimonials() {
 
         {/* comment section */}
         <div className="w-3/4 bg-green-500 flex justify-center items-center">
-          {testimonials[0].name}
+          {testimonial.comments}
         </div>
       </div>
     </section>
