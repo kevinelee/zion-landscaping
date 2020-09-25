@@ -28,14 +28,12 @@ function Testimonials() {
     <section className="bg-gray-50">
       <div className="flex justify-center max-w-7xl h-96 mx-auto py-8">
         {/* clickable names */}
-        <div
-          className="w-1/4 flex flex-col "
-        >
+        <div className="w-1/4 flex flex-col ">
           {testimonials.map((testimonial) => {
             return (
               <div
                 key={testimonial.name}
-                onClick={()=>setTestimonial(testimonial)}
+                onClick={() => setTestimonial(testimonial)}
                 className="h-32 flex justify-center items-center border-2 m-2 hover:border-black"
               >
                 {testimonial.name}
@@ -46,7 +44,7 @@ function Testimonials() {
 
         {/* comment section */}
         <div className="w-3/4 bg-green-500 flex justify-center items-center">
-          {testimonial.comments}
+          <p className="p-8">{testimonial.comments}</p>
         </div>
       </div>
     </section>
