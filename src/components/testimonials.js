@@ -29,23 +29,33 @@ function Testimonials() {
       <div className="flex justify-center max-w-7xl h-96 mx-auto py-8">
         {/* clickable names */}
         <div className="w-1/4 flex flex-col ">
-          {testimonials.map((testimonial) => {
-            return (
-              <div
-                key={testimonial.name}
-                onClick={() => setTestimonial(testimonial)}
-                className="h-32 flex justify-center items-center border-2 m-2 hover:border-black"
-              >
-                {testimonial.name}
-              </div>
-            );
-          })}
+          {
+            testimonials && testimonials.length > 0
+              ? testimonials.map((testimonial) => {
+                  return (
+                    <div
+                      key={testimonial.name}
+                      onClick={() => setTestimonial(testimonial)}
+                      className="h-32 flex justify-center items-center border-2 m-2 hover:border-black"
+                    >
+                      {testimonial.name}
+                    </div>
+                  );
+               })
+              : null
+          }
         </div>
 
         {/* comment section */}
-        <div className="w-3/4 bg-green-500 flex justify-center items-center">
-          <p className="p-8">{testimonial.comments}</p>
-        </div>
+        {
+          testimonial.comments
+            ? (
+              <div className="w-3/4 bg-green-500 flex justify-center items-center">
+                <p className="p-8">{testimonial.comments}</p>
+              </div>
+            )
+            : null
+        }
       </div>
     </section>
   );

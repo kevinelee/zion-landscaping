@@ -7,8 +7,10 @@ import AboutUs from "../components/about-us";
 import Carousel from "../components/carousel";
 import ExceptionalService from "../components/exceptional-services";
 import WhyChooseUs from "../components/why-choose-us";
-import AreYouTired from "../components/are-you-tired";
+import Banner from "../components/banner";
 import Testimonials from "../components/testimonials";
+import Hero from "../components/hero";
+import Button from "../components/Button"
 // import Hours from "../components/hours";
 
 function IndexPage() {
@@ -21,9 +23,26 @@ function IndexPage() {
       <Carousel />
       <AboutUs />
       <WhyChooseUs />
-      <AreYouTired />
+      <Banner>
+
+        <div className="green-banner w-screen"></div>
+        <Hero firstLine="are you tired" secondLine="yes you are">
+          <div className="inline-flex rounded-md shadow">
+            <Button
+              text="Get Started"
+              extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline"
+            />
+          </div>
+          <div className="rounded-md shadow ml-4">
+            <Button
+              text="Learn More"
+              extraClasses="w-full flex text-green-600 bg-white hover:text-green-500 focus:outline-none focus:border-green-300 focus:shadow-outline-green"
+            />
+          </div>
+        </Hero>
+      </Banner>
       <ExceptionalService />
-      <Testimonials/>
+      <Testimonials />
       {/* <Hours/> */}
     </Layout>
   );
