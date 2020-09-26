@@ -18,9 +18,10 @@ export default function Body() {
 
   return (
     <section>
-      <div className="flex justify-center p-8">
-        <div className="flex flex-col justify-center">
-          <h1>We Are The Landscaper</h1>
+      <div className="flex justify-center py-8">
+        <div className="flex flex-col justify-center ">
+          <h1 className="text-5xl">We Are The Landscaper</h1>
+          <br />
           <p>
             The landscaper is a full-service landscaping company with a
             straightforward and unique design/build philosophy. We believe in
