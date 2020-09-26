@@ -4,6 +4,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../css/style.css";
 import Hero from "../components/hero";
+import Button from "../components/Button";
 
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -14,6 +15,25 @@ export default function Carousel() {
     },
     loop: true,
   });
+
+  const Buttons = () => {
+    return (
+      <>
+        <div className="inline-flex rounded-md shadow">
+          <Button
+            text="Get Started"
+            extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline"
+          />
+        </div>
+        <div className="rounded-md shadow ml-4">
+          <Button
+            text="Learn More"
+            extraClasses="w-full flex text-green-600 bg-white hover:text-green-500 focus:outline-none focus:border-green-300 focus:shadow-outline-green"
+          />
+        </div>
+      </>
+    );
+  };
 
   return (
     <>
@@ -27,17 +47,18 @@ export default function Carousel() {
               firstLine="Do you like what you see?"
               secondLine="Give us a call!"
             />
+            <Buttons />
           </div>
           <div className="keen-slider__slide number-slide2">
             <Hero firstLine="Please." secondLine="Give us a call!" />
+            <Buttons />
           </div>
           <div className="keen-slider__slide number-slide3">
             <Hero firstLine="We're begging you!" secondLine="Give us a call!" />
+            <Buttons />
           </div>
-          {/* <div className="keen-slider__slide number-slide4"></div>
-          <div className="keen-slider__slide number-slide5"></div>
-          <div className="keen-slider__slide number-slide6"></div> */}
         </div>
+
         {slider && (
           <>
             <ArrowLeft
