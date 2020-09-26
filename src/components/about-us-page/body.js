@@ -4,7 +4,7 @@ import React from "react";
 export default function Body() {
   const YearBox = ({ year, title, paragraph }) => {
     return (
-      <div className="md:w-96 mx-4">
+      <div className="md:w-96 mr-4">
         <h1 className="mb-2">
           <span className="border-2 border-gray text-green-500 text-3xl p-1 mr-2">
             {year}
@@ -52,7 +52,7 @@ export default function Body() {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row justify-center items-center">
         <div>
           <YearBox
             year="1978"
