@@ -46,16 +46,19 @@ export default function Carousel() {
             <Hero
               firstLine="Do you like what you see?"
               secondLine="Give us a call!"
-            />
-            <Buttons />
+            >
+              <Buttons />
+            </Hero>
           </div>
           <div className="keen-slider__slide number-slide2">
-            <Hero firstLine="Please." secondLine="Give us a call!" />
-            <Buttons />
+            <Hero firstLine="Please." secondLine="Give us a call!">
+              <Buttons />
+            </Hero>
           </div>
           <div className="keen-slider__slide number-slide3">
-            <Hero firstLine="We're begging you!" secondLine="Give us a call!" />
-            <Buttons />
+            <Hero firstLine="We're begging you!" secondLine="Give us a call!">
+              <Buttons />
+            </Hero>
           </div>
         </div>
 
