@@ -1,17 +1,49 @@
 import React from "react";
+import CountUp from "react-countup";
 
 export default function Stats() {
   return (
     <section>
       <div>
-        <h3 className="text-lg leading-6 font-medium text-gray-900">
-          Last 30 days
-        </h3>
-        <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-5 grid grid-cols-2 gap-5  lg:grid-cols-4">
           <div className="bg-white overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
               <div className="flex items-center">
-                <div className="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
+                  <svg
+                    className="h-6 w-6 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div className="ml-5 w-0 flex-1">
+                  <dl>
+                    <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
+                      Gardens Yeeted
+                    </dt>
+                    <dd className="flex items-baseline">
+                      <div className="text-2xl leading-8 font-semibold text-gray-900">
+                        <CountUp end={806} />
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="px-4 py-5 sm:p-6">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                   <svg
                     className="h-6 w-6 text-white"
                     fill="none"
@@ -19,9 +51,9 @@ export default function Stats() {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
                     />
                   </svg>
@@ -29,156 +61,84 @@ export default function Stats() {
                 <div className="ml-5 w-0 flex-1">
                   <dl>
                     <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
-                      Total Subscribers
+                      Satisfied Clients
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        71,897
-                      </div>
-                      <div className="ml-2 flex items-baseline text-sm leading-5 font-semibold text-green-600">
-                        <svg
-                          className="self-center flex-shrink-0 h-5 w-5 text-green-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <span className="sr-only">Increased by</span>
-                        122
+                        <CountUp end={110} />%
                       </div>
                     </dd>
                   </dl>
                 </div>
-              </div>
-            </div>
-            <div className="bg-gray-50 px-4 py-4 sm:px-6">
-              <div className="text-sm leading-5">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                >
-                  View all
-                </a>
               </div>
             </div>
           </div>
           <div className="bg-white overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
               <div className="flex items-center">
-                <div className="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                   <svg
-                    className="h-6 w-6 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
+                    className="h-6 w-6 text-white"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                     />
                   </svg>
                 </div>
                 <div className="ml-5 w-0 flex-1">
                   <dl>
                     <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
-                      Avg. Open Rate.
+                      Houses Remodeled
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        58.16%
-                      </div>
-                      <div className="ml-2 flex items-baseline text-sm leading-5 font-semibold text-green-600">
-                        <svg
-                          className="self-center flex-shrink-0 h-5 w-5 text-green-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <span className="sr-only">Increased by</span>
-                        5.4%
+                        <CountUp end={1000} /> homes
                       </div>
                     </dd>
                   </dl>
                 </div>
-              </div>
-            </div>
-            <div className="bg-gray-50 px-4 py-4 sm:px-6">
-              <div className="text-sm leading-5">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                >
-                  View all
-                </a>
               </div>
             </div>
           </div>
+
           <div className="bg-white overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
               <div className="flex items-center">
-                <div className="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                   <svg
                     className="h-6 w-6 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
                     />
                   </svg>
                 </div>
                 <div className="ml-5 w-0 flex-1">
                   <dl>
                     <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
-                      Avg. Click Rate
+                      Landscapers
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        24.57
-                      </div>
-                      <div className="ml-2 flex items-baseline text-sm leading-5 font-semibold text-red-600">
-                        <svg
-                          className="self-center flex-shrink-0 h-5 w-5 text-red-500"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <span className="sr-only">Decreased by</span>
-                        3.2%
+                        <CountUp end={3} />
                       </div>
                     </dd>
                   </dl>
                 </div>
-              </div>
-            </div>
-            <div className="bg-gray-50 px-4 py-4 sm:px-6">
-              <div className="text-sm leading-5">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                >
-                  View all
-                </a>
               </div>
             </div>
           </div>
