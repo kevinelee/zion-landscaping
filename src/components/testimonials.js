@@ -52,7 +52,7 @@ function Testimonials() {
 
         {/* comment section */}
         {testimonial.comments ? (
-          <div className="w-3/4 bg-green-500 flex justify-center items-center">
+          <div className="w-1/2 bg-gray-200 flex justify-center items-center rounded-md shadow-lg">
             <p className="p-8">{testimonial.comments}</p>
           </div>
         ) : null}
