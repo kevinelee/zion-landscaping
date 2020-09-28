@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Body from "../components/about-us-page/body";
-import Landscapers from "../components/about-us-page/landscapers";
+import Landscapers from "../components/about-us-page/landscapers/index";
 
 function AboutPage() {
   return (
