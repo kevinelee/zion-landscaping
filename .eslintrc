@@ -8,8 +8,7 @@
   "parser": "babel-eslint",
   "rules": {
     // https://eslint.org/docs/2.0.0/rules/strict
-    "strict": 0,
-    "react/prop-types": 0
+    "strict": 0
   },
   "settings": {
     "react": {
@@ -23,5 +22,6 @@
     "plugin:react/recommended",
     // https://github.com/benmosher/eslint-plugin-import
     "plugin:import/recommended"
-  ]
+  ],
+  "rules": { "react/prop-types": 0 }
 }
