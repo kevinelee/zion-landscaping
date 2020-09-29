@@ -64,28 +64,28 @@ export default function Form() {
         name="firstName"
         ref={register({ required: true, maxLength: 80 })}
       />
-      {errors.firstName && <p>This field is required</p>}
+      {errors.firstName && <p className="mb-3">This field is required</p>}
       <input
         type="text"
         placeholder="Last Name"
         name="lastName"
         ref={register({ required: true, maxLength: 100 })}
       />
-      {errors.lastName && <p>This field is required</p>}
+      {errors.lastName && <p className="mb-3">This field is required</p>}
       <input
         type="tel"
         placeholder="Phone Number"
         name="phone"
         ref={register({ required: true, min: 10, maxLength: 12 })}
       />
-      {errors.phone && <p>Please enter valid phone number</p> }
+      {errors.phone && <p className="mb-3">Please enter valid phone number</p> }
       <input
         type="email"
         placeholder="Email"
         name="email"
         ref={register({ required: true, pattern: /^\S+@\S+$/i })}
       />
-      {errors.email && <p>Please enter valid email</p>}
+      {errors.email && <p className="mb-3">Please enter valid email</p>}
 
       <textarea
         name="inquiry"
