@@ -14,7 +14,7 @@ function AboutPage() {
         title="About"
       />
 
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto px-4">
         <Stats />
         <Body />
         <Landscapers />

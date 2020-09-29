@@ -25,9 +25,9 @@ export default function Stats() {
                     />
                   </svg>
                 </div>
-                <div className="ml-5 w-0 flex-1">
+                <div className="ml-3 w-0 flex-1">
                   <dl>
-                    <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
+                    <dt className="text-sm leading-5 font-medium text-gray-500">
                       Gardens Yeeted
                     </dt>
                     <dd className="flex items-baseline">
@@ -58,9 +58,9 @@ export default function Stats() {
                     />
                   </svg>
                 </div>
-                <div className="ml-5 w-0 flex-1">
+                <div className="ml-3 w-0 flex-1">
                   <dl>
-                    <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
+                    <dt className="text-sm leading-5 font-medium text-gray-500">
                       Satisfied Clients
                     </dt>
                     <dd className="flex items-baseline">
@@ -92,9 +92,9 @@ export default function Stats() {
                     />
                   </svg>
                 </div>
-                <div className="ml-5 w-0 flex-1">
+                <div className="ml-3 w-0 flex-1">
                   <dl>
-                    <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
+                    <dt className="text-sm leading-5 font-medium text-gray-500">
                       Houses Remodeled
                     </dt>
                     <dd className="flex items-baseline">
@@ -127,10 +127,10 @@ export default function Stats() {
                     />
                   </svg>
                 </div>
-                <div className="ml-5 w-0 flex-1">
+                <div className="ml-3 w-0 flex-1">
                   <dl>
                     <dt className="text-sm leading-5 font-medium text-gray-500 truncate">
-                      Landscapers
+                      Great Landscapers
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
