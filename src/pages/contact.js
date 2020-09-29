@@ -12,7 +12,7 @@ function ContactPage() {
         title="Contact"
       />
       <section className="px-4 py-8">
-        <h1 className="text-center">Contact us!</h1>
+        <h1 className="text-center mb-4 text-4xl">Contact us!</h1>
         <Form/>
         {/* <form className="mx-auto md:w-1/2">
           <p className="mb-8 leading-loose">
