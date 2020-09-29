@@ -70,10 +70,6 @@ function Header() {
               route: `/contact`,
               title: `Contact`,
             },
-            {
-              route: "/about",
-              title: "Gardening",
-            },
           ].map((link) => (
             <Link
               className="block mt-4 text-white hover:text-gray-400 no-underline md:inline-block md:mt-0 md:ml-4 font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out rounded-md text-base px-3 py-2 "
