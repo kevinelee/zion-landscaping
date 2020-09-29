@@ -32,32 +32,7 @@ export default function Form() {
   // }
 
   return (
-    // <form onSubmit={handleSubmit(onSubmit)}>
-
-    //   <label>First Name</label>
-    //   <input name="firstName" ref={register({ required: true })} />
-    //   {errors.firstName && <p>This field is required</p>}
-
-    //   <label>Last Name</label>
-    //   <input name="lastName" ref={register({ required: true })} />
-    //   {errors.lastName && <p>This field is required</p>}
-
-    //   <label>Email</label>
-    //   <input name="email" ref={register({ required: true })} />
-    //   {errors.email && <p>This field is required</p>}
-
-    //   <label>Phone Number</label>
-    //   <input name="phoneNumber" ref={register({ required: true })} />
-    //   {errors.phoneNumber && <p>This field is required</p>}
-
-    //   <label>Inquiry</label>
-    //   <textarea name="inquiry" ref={register({ required: true })} />
-    //   {errors.inquiry && <p>This field is required</p>}
-
-    //   <input className="bg-green-600 hover:bg-green-500" type="submit" />
-    // </form>
-
-    <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
       <input
         type="text"
         placeholder="First Name"
