@@ -1,3 +1,5 @@
+/* eslint react/prop-types: 0 */
+
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -11,28 +13,17 @@ export default function Form() {
 
   console.log(watch("example")); // you can watch individual input by pass the name of the input
 
-  // if (typeof input["phone"] !== "undefined") {
-
-  //   let pattern = new RegExp(/^[0-9\b]+$/);
-
-  //   if (!pattern.test(input["phone"])) {
-
-  //     isValid = false;
-
-  //     errors["phone"] = "Please enter only number.";
-
-  //   }else if(input["phone"].length != 10){
-
-  //     isValid = false;
-
-  //     errors["phone"] = "Please enter valid phone number.";
-
-  //   }
-
-  // }
+  // const FormInput = ({ type, placeholder, name, ref, errorText }) => {
+  //   return (
+  //     <>
+  //       <input type={type} placeholder={placeholder} name={name} ref={ref} />
+  //       {errors.name && <p className="mb-3">{errorText}</p>}
+  //     </>
+  //   );
+  // };
 
   return (
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <input
         type="text"
         placeholder="First Name"
@@ -53,7 +44,7 @@ export default function Form() {
         name="phone"
         ref={register({ required: true, min: 10, maxLength: 12 })}
       />
-      {errors.phone && <p className="mb-3">Please enter valid phone number</p> }
+      {errors.phone && <p className="mb-3">Please enter valid phone number</p>}
       <input
         type="email"
         placeholder="Email"
@@ -67,7 +58,7 @@ export default function Form() {
         ref={register({ required: true })}
         placeholder="Inquiry"
       />
-      {errors.inquiry && <p>Please let us know what you're interested in!</p>}
+      {errors.inquiry && <p>Please let us know what you are interested in!</p>}
 
       <input className="bg-green-600 hover:bg-green-500" type="submit" />
     </form>
