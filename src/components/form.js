@@ -42,7 +42,7 @@ export default function Form() {
         type="tel"
         placeholder="Phone Number"
         name="phone"
-        ref={register({ required: true, min: 10, maxLength: 12 })}
+        ref={register({ required: true, minLength: 10, maxLength: 12 })}
       />
       {errors.phone && <p className="mb-3">Please enter valid phone number</p>}
       <input

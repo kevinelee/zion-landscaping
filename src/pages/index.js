@@ -10,7 +10,7 @@ import WhyChooseUs from "../components/why-choose-us";
 import Banner from "../components/banner";
 import Testimonials from "../components/testimonials";
 import Hero from "../components/hero";
-import Button from "../components/Button"
+import Button from "../components/Button";
 // import Hours from "../components/hours";
 
 function IndexPage() {
@@ -24,7 +24,6 @@ function IndexPage() {
       <AboutUs />
       <WhyChooseUs />
       <Banner>
-
         <div className="green-banner w-screen"></div>
         <Hero firstLine="are you tired" secondLine="yes you are">
           <div className="inline-flex rounded-md shadow">
