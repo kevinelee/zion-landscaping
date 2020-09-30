@@ -32,7 +32,10 @@ function Testimonials() {
 
   return (
     <section className="bg-gray-50">
-      <div className="flex flex-col lg:flex-row justify-center max-w-7xl h-72 lg:h-96 mx-auto px-2 lg:py-8 mb-4 items-center">
+      <h3 className="max-w-screen-xl mx-auto text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 lg:py-8">
+        Testimonials
+      </h3>
+      <div className="flex flex-col lg:flex-row justify-center max-w-7xl  mx-auto px-2 lg:py-8 mb-4 items-center">
         <div className="flex lg:flex-col lg:w-1/4 justify-center">
           {testimonials && testimonials.length > 0
             ? testimonials.map((testimonial) => {
@@ -56,9 +59,11 @@ function Testimonials() {
 
         {/* comment section */}
         {testimonial.comments ? (
-          <div className="md:w-4/5 lg:w-1/2 bg-gray-200 flex justify-center items-center rounded-md shadow-lg flex-col py-4 px-8 lg:h-56">
-            <h1 className="md:hidden text-2xl ">{testimonial.name}</h1>
-            <p className="border-t-2 border-black md:border-none">{testimonial.comments}</p>
+          <div className="bg-gray-200 flex justify-center items-center rounded-md shadow-lg flex-col py-4 px-8 lg:h-56">
+            <h1 className="md:hidden text-2xl font-semibold">{testimonial.name}</h1>
+            <p className="border-t-2 border-black md:border-none font-semibold text-md">
+              {testimonial.comments}
+            </p>
           </div>
         ) : null}
       </div>

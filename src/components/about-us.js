@@ -11,7 +11,7 @@ function AboutUs() {
           </h1>
         </div>
         <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
-          <div className="relative z-10 mb-12 lg:mb-0">
+          <div className="relative mb-12 lg:mb-0">
             <div className="mb-10 prose text-gray-500 mx-auto lg:max-w-none">
               <p>
                 The Landscaper is made up of a group of highly skilled
@@ -54,7 +54,7 @@ function AboutUs() {
           </div>
 
           <div className="relative text-base mx-auto w-full">
-            <h3 className="text-center text-3xl mb-4">Request an Estimate!</h3>
+            <h3 className="text-center text-3xl mb-2">Request an Estimate!</h3>
             <Form />
           </div>
         </div>
