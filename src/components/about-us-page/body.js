@@ -20,7 +20,7 @@ export default function Body() {
     <section>
       <div className="flex justify-center py-8">
         <div className="flex flex-col justify-center ">
-          <h1 className="text-5xl">We Are The Landscaper</h1>
+          <h1 className="text-5xl font-semibold">We Are The Landscaper</h1>
           <br />
           <p>
             The landscaper is a full-service landscaping company with a
@@ -46,7 +46,7 @@ export default function Body() {
         </div>
 
         <img
-          className="w-1/2 hidden lg:block"
+          className="w-1/2 ml-8 hidden lg:block"
           src="https://www.houselogic.com/wp-content/uploads/2010/03/landscape-curb-appeal-retina_retina_f09021ca6edac80b70f3a5b5092c4059.jpg"
           alt="landscaping"
         />
