@@ -38,11 +38,14 @@ export default function Carousel() {
   return (
     <>
       <div className="navigation-wrapper ">
+       
         <div
           ref={sliderRef}
           className="keen-slider min-w-full h-96 lg:height80vh"
         >
-          <div className="keen-slider__slide number-slide1">
+          
+          <div className="keen-slider__slide number-slide1 ">
+            
             <Hero
               firstLine="Do you like what you see?"
               secondLine="Give us a call!"

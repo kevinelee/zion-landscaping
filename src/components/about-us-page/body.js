@@ -4,12 +4,12 @@ import React from "react";
 export default function Body() {
   const YearBox = ({ year, title, paragraph }) => {
     return (
-      <div className="md:w-96 mr-4 mb-4">
+      <div className="md:w-96 mr-4 mb-4 ">
         <h1 className="mb-2">
           <span className="border-2 border-gray text-green-500 text-3xl p-1 mr-2">
             {year}
           </span>
-          {title}
+          {title} 
         </h1>
         <p>{paragraph}</p>
       </div>

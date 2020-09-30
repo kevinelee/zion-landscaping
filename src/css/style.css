@@ -21,22 +21,27 @@
   max-height: 90vh;
 }
 
-/* .keen-slider{
-  height: 96rem;
-} */
+.text-shadow {
+  text-shadow: 1px 0.5px black;
+}
 
 .number-slide1 {
-  background-image: url("https://www.olympiclandscape.com/wp-content/uploads/walls-stone-work-01.jpg");
+  /* background-image: url("https://www.olympiclandscape.com/wp-content/uploads/walls-stone-work-01.jpg");
+  background-size: cover; */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
+    url("https://www.olympiclandscape.com/wp-content/uploads/walls-stone-work-01.jpg");
   background-size: cover;
 }
 
 .number-slide2 {
-  background-image: url("https://i.pinimg.com/originals/46/77/8b/46778bbb1eb15ebcc1972b05482478fa.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
+    url("https://i.pinimg.com/originals/46/77/8b/46778bbb1eb15ebcc1972b05482478fa.jpg");
   background-size: cover;
 }
 
 .number-slide3 {
-  background-image: url("https://www.etlandscapingconstruction.com/wordpress/wp-content/uploads/slider-2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
+    url("https://www.etlandscapingconstruction.com/wordpress/wp-content/uploads/slider-2.jpg");
   background-size: cover;
 }
 
@@ -113,4 +118,15 @@
   opacity: 0.15;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: auto;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
 }
