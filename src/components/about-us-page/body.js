@@ -5,11 +5,11 @@ export default function Body() {
   const YearBox = ({ year, title, paragraph }) => {
     return (
       <div className="md:w-96 mr-4 mb-4 ">
-        <h1 className="mb-2">
-          <span className="border-2 border-gray text-green-500 text-3xl p-1 mr-2">
+        <h1 className="mb-2 flex">
+          <div className="border-2 border-gray rounded text-green-500 font-semibold text-3xl py-1 px-3 mr-2">
             {year}
-          </span>
-          {title} 
+          </div>
+          <div className="my-auto font-semibold">{title}</div>
         </h1>
         <p>{paragraph}</p>
       </div>
