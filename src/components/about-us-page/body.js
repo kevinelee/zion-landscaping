@@ -52,7 +52,7 @@ export default function Body() {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center">
+      <div className="flex flex-col lg:flex-row justify-between items-center">
         <div>
           <YearBox
             year="1978"
