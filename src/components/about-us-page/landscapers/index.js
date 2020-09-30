@@ -31,7 +31,7 @@ export default function Landscapers() {
 
   return (
     <section>
-      <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-0">
+      <div className="relative bg-gray-50 py-16 px-4 sm:px-6  lg:px-0">
         <div className="absolute inset-0">
           <div className="bg-white h-1/3 sm:h-2/3"></div>
         </div>

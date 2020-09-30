@@ -9,7 +9,7 @@ export default function Stats() {
   return (
     <section>
       <div ref={ref}>
-        <div className="mt-5 grid grid-cols-2 gap-5  lg:grid-cols-4">
+        <div className="my-5 grid grid-cols-2 gap-5  lg:grid-cols-4">
           <div className="bg-white overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
               <div className="flex items-center">
