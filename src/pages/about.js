@@ -15,9 +15,9 @@ function AboutPage() {
       />
 
       <section className="max-w-7xl mx-auto px-4">
-        <Stats />
         <Body />
         <Landscapers />
+        <Stats />
       </section>
     </Layout>
   );

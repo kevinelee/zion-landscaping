@@ -1,11 +1,15 @@
 import React from "react";
 import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 export default function Stats() {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
   return (
     <section>
-      <div>
-        <div className="mt-5 grid grid-cols-2 gap-5  lg:grid-cols-4">
+      <div ref={ref}>
+        <div className="my-5 grid grid-cols-2 gap-5  lg:grid-cols-4">
           <div className="bg-white overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
               <div className="flex items-center">
@@ -31,8 +35,12 @@ export default function Stats() {
                       Gardens Yeeted
                     </dt>
                     <dd className="flex items-baseline">
-                      <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        <CountUp end={806} />
+                      <div
+                        ref={ref}
+                        className="text-2xl leading-8 font-semibold text-gray-900"
+                      >
+                        {inView === true ? <CountUp end={806} /> : <CountUp end={0}/>}
+                        
                       </div>
                     </dd>
                   </dl>
@@ -65,7 +73,8 @@ export default function Stats() {
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        <CountUp end={110} />%
+                        {inView === true ? <CountUp end={400} /> : <CountUp end={0} />}
+                        
                       </div>
                     </dd>
                   </dl>
@@ -99,7 +108,7 @@ export default function Stats() {
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        <CountUp end={1000} /> homes
+                      {inView === true ? <CountUp end={1000} /> : <CountUp end={0}/>}
                       </div>
                     </dd>
                   </dl>
@@ -134,7 +143,7 @@ export default function Stats() {
                     </dt>
                     <dd className="flex items-baseline">
                       <div className="text-2xl leading-8 font-semibold text-gray-900">
-                        <CountUp end={3} />
+                      {inView === true ? <CountUp end={300000} /> : <CountUp end={0}/>}
                       </div>
                     </dd>
                   </dl>

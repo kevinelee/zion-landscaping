@@ -5,11 +5,11 @@ export default function Body() {
   const YearBox = ({ year, title, paragraph }) => {
     return (
       <div className="md:w-96 mr-4 mb-4 ">
-        <h1 className="mb-2">
-          <span className="border-2 border-gray text-green-500 text-3xl p-1 mr-2">
+        <h1 className="mb-2 flex">
+          <div className="border-2 border-gray rounded text-green-500 font-semibold text-3xl py-1 px-3 mr-2">
             {year}
-          </span>
-          {title} 
+          </div>
+          <div className="my-auto font-semibold">{title}</div>
         </h1>
         <p>{paragraph}</p>
       </div>
@@ -20,7 +20,7 @@ export default function Body() {
     <section>
       <div className="flex justify-center py-8">
         <div className="flex flex-col justify-center ">
-          <h1 className="text-5xl">We Are The Landscaper</h1>
+          <h1 className="text-5xl font-semibold">We Are The Landscaper</h1>
           <br />
           <p>
             The landscaper is a full-service landscaping company with a
@@ -46,13 +46,13 @@ export default function Body() {
         </div>
 
         <img
-          className="w-1/2 hidden lg:block"
+          className="w-1/2 ml-8 hidden lg:block"
           src="https://www.houselogic.com/wp-content/uploads/2010/03/landscape-curb-appeal-retina_retina_f09021ca6edac80b70f3a5b5092c4059.jpg"
           alt="landscaping"
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center">
+      <div className="flex flex-col lg:flex-row justify-between items-center">
         <div>
           <YearBox
             year="1978"
