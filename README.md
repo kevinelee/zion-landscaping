@@ -19,3 +19,6 @@ Features
 -----
 * User can view product services
 * User can submit inquiry request
+
+![Alt Text](zion-landscaping.gif)
+
