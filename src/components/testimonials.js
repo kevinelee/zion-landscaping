@@ -27,8 +27,6 @@ function Testimonials() {
 
   const [testimonial, setTestimonial] = useState(testimonials[0]);
 
-  console.log(testimonials, "testimonials");
-  console.log(testimonial, "testimonial");
 
   return (
     <section className="bg-gray-50">

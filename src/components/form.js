@@ -9,18 +9,10 @@ export default function Form() {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-  }; // your form submit function which will invoke after successful validation
+  }; 
 
-  console.log(watch("example")); // you can watch individual input by pass the name of the input
+  console.log(watch("example")); 
 
-  // const FormInput = ({ type, placeholder, name, ref, errorText }) => {
-  //   return (
-  //     <>
-  //       <input type={type} placeholder={placeholder} name={name} ref={ref} />
-  //       {errors.name && <p className="mb-3">{errorText}</p>}
-  //     </>
-  //   );
-  // };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +52,7 @@ export default function Form() {
       />
       {errors.inquiry && <p>Please let us know what you are interested in!</p>}
 
-      <input className="bg-green-600 hover:bg-green-500" type="submit" />
+      <input className="bg-green-600 hover:bg-green-500 cursor-pointer" type="submit" />
     </form>
   );
 }
