@@ -14,11 +14,12 @@ Technologies Used
 Live Demo
 -----
 Try the application live at https://zion-landscaping.netlify.app.
+![Alt Text](zion-landscaping.gif)
 
 Features
 -----
 * User can view product services
 * User can submit inquiry request
 
-![Alt Text](zion-landscaping.gif)
+
 
