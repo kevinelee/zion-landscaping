@@ -18,7 +18,7 @@ export default class GridGallery extends Component {
     // const ServicesButton = ({service})=>{
     //   return (
     //     <button
-    //         className="services-button"
+    //         className="services-button m-2"
     //         onClick={this.handleSelect(service)}
     //       >
     //         {service}
@@ -56,71 +56,71 @@ export default class GridGallery extends Component {
       >
         <div className="button-group flex justify-center">
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("patio")}
           >
             Patio
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("front-yard")}
           >
             Front Yard
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("driveway")}
           >
             Driveway
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("fire-place")}
           >
             Fire Place
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("patio-cover")}
           >
             Patio Cover
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("putting-green")}
           >
             Putting Green
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("barbeque")}
           >
             Barbeque
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("fire-place")}
           >
             Fire Place
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("pool-deck")}
           >
             Pool Deck
           </button>
           <button
-            className="services-button"
+            className="services-button m-2"
             onClick={this.handleSelect("fountain")}
           >
             Fountain
           </button>
         </div>
-        <div className="grid-gallery grid grid-cols-3">
+        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {this.state.gallery.length > 0 &&
             this.state.gallery.map((data) => {
               return (
-                <div className="grid-gallery__image m-4" key={data.public_id}>
+                <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer" key={data.public_id}>
                   <Image publicId={data.public_id}>
                     <Transformation
                       crop="scale"
