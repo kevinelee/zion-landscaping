@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Form from "../components/form";
+import GridGallery from "../components/cloudinary"
 
-function ContactPage() {
+function ServicesPage() {
   return (
     <Layout>
       <SEO
@@ -11,11 +11,10 @@ function ContactPage() {
         title="Contact"
       />
       <section className="px-4 py-8">
-        <h1 className="text-center mb-6 text-4xl">Contact us!</h1>
-        <Form />
+        <GridGallery/>
       </section>
     </Layout>
   );
 }
 
-export default ContactPage;
+export default ServicesPage;

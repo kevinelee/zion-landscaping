@@ -3840,6 +3840,19 @@ clone-response@1.0.2, clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+cloudinary-core@^2.11.3:
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.11.3.tgz#1440f61c6280485094aac87021b7e10f746dc69e"
+  integrity sha512-ZRnpjSgvx+LbSf+aEz5NKzxDB4Z0436aY/0BSDa90kAHiwAyd84VyEi95I74SE80e15Ri9t5S2xtksTXpzk9Xw==
+
+cloudinary-react@^1.6.7:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/cloudinary-react/-/cloudinary-react-1.6.7.tgz#13a8c8660a36377edbc2482cdc7f061a12d60b19"
+  integrity sha512-u7Mx2CWEPG7Iy/3jn+JcvYu50uHwem4XokveNDqdnoeBJwit2B/ccfUtOUbpSfKAaEKLxXuPcQR5H8FEpIoavw==
+  dependencies:
+    cloudinary-core "^2.11.3"
+    prop-types "^15.6.2"
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -11593,6 +11606,11 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lazyload@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-3.0.0.tgz#f9741daa823d95ddb4dd59527ca6b8845d1b4c3e"
+  integrity sha512-wYR9iroanIUELPQ7YtgeHjl7KburmA1WxB2GurjAOs31B6IehxxvHEp/74pIaWJLv+o/ug952WoWqjFpDzl5Ig==
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
