@@ -1,6 +1,6 @@
 # zion-landscaping
 
-A front-end website for landscaping services created by React.
+A front-end website for landscaping services created by React
 
 Technologies Used
 -----
