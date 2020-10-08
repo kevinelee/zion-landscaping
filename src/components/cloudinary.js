@@ -2,9 +2,9 @@ import React, { Component } from "react";
 // import Img from "gatsby-image";
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 import "regenerator-runtime/runtime";
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 
-export class GridGallery extends Component {
+export default class GridGallery extends Component {
   constructor(props) {
     super(props);
 
@@ -29,11 +29,11 @@ export class GridGallery extends Component {
     }
   }
 
-  handleSelect = (list) => (e) => {
+  handleSelect = (list) => () => {
     this.setState({ selectedButton: list }, this.componentDidMount);
   };
 
-  handleModal = (imageId, e) => {
+  handleModal = (imageId) => {
     this.setState({ isPortal: true, imageId });
   };
 
@@ -61,7 +61,7 @@ export class GridGallery extends Component {
         </div>
         <div className="grid-gallery">
           {this.state.gallery.length > 0 &&
-            this.state.gallery.map((data, key) => {
+            this.state.gallery.map((data) => {
               return (
                 <div className="grid-gallery__image" key={data.public_id}>
                   <Image publicId={data.public_id}>
