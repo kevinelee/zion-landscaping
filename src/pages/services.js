@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import GridGallery from "../components/cloudinary"
+// import GridGallery from "../components/cloudinary"
+import GridGallery from "../components/test-cloudinary"
 
 function ServicesPage() {
   return (
