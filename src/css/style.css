@@ -130,3 +130,12 @@
   left: 0px;
   background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
 }
+
+.grid-gallery__image {
+  transition: all 1s ease-in-out
+}
+
+.grid-gallery__image:hover {
+  opacity: 0.75;
+  -webkit-filter:  sepia(125%);
+}
