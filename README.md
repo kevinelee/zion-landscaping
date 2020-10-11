@@ -20,7 +20,7 @@ Try the application live at https://zion-landscaping.netlify.app.
 Features
 -----
 * User can view product services
-* User can submit inquiry request
+* User can submit inquiry requests
 
 
 
