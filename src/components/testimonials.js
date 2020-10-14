@@ -57,7 +57,7 @@ function Testimonials() {
 
         {/* comment section */}
         {testimonial.comments ? (
-          <div className="bg-gray-200 flex justify-center items-center rounded-md shadow-lg flex-col py-4 px-8 lg:h-56">
+          <div className="bg-gray-200 flex justify-center items-center rounded-md lg:w-3/4 shadow-lg flex-col py-4 px-8 lg:h-56">
             <h1 className="md:hidden text-2xl font-semibold">{testimonial.name}</h1>
             <p className="border-t-2 border-black md:border-none font-semibold text-md">
               {testimonial.comments}
