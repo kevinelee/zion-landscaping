@@ -1,9 +1,11 @@
-import React from "react";
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import GridGallery from "../components/cloudinary"
+import GridGallery from "../components/functional-cloudinary";
+import React  from "react";
 
 function ServicesPage() {
+
   return (
     <Layout>
       <SEO
@@ -11,7 +13,7 @@ function ServicesPage() {
         title="Contact"
       />
       <section className="px-4 py-8">
-        <GridGallery/>
+        <GridGallery />
       </section>
     </Layout>
   );
