@@ -20,16 +20,17 @@ const GridGallery = () => {
     setSelectedButton(e.target.value);
   };
 
-  // const ServicesButton = ({service})=>{
-  //   return (
-  //     <button
-  //         className="services-button m-2"
-  //         onClick={this.handleSelect(service)}
-  //       >
-  //         {service}
-  //       </button>
-  //   )
-  // }
+  const ServicesButton = ({ value, service }) => {
+    return (
+      <button
+        value={value}
+        className="services-button m-2"
+        onClick={(e) => handleSelect(e)}
+      >
+        {service}
+      </button>
+    );
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -50,76 +51,15 @@ const GridGallery = () => {
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
         <div className="button-group flex justify-center">
-          <button
-            value="patio"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Patiozzz
-          </button>
-          <button
-            value="front-yard"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Front Yard
-          </button>
-          <button
-            value="driveway"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Driveway
-          </button>
-          <button
-            value="fire-place"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Fire Place
-          </button>
-          <button
-            value="patio-cover"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Patio Cover
-          </button>
-          <button
-            value="putting-green"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Putting Green
-          </button>
-          <button
-            value="barbeque"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Barbecue
-          </button>
-          <button
-            value="fire-place"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Fire Place
-          </button>
-          <button
-            value="pool-deck"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Pool Deck
-          </button>
-          <button
-            value="fountain"
-            className="services-button m-2"
-            onClick={(e) => handleSelect(e)}
-          >
-            Fountain
-          </button>
+          <ServicesButton value="patio" service="Patio" />
+          <ServicesButton value="front-yard" service="Front Yard" />
+          <ServicesButton value="driveway" service="Driveway" />
+          <ServicesButton value="fire-place" service="Fire Place" />
+          <ServicesButton value="patio-cover" service="Patio Cover" />
+          <ServicesButton value="putting-green" service="Putting Green" />
+          <ServicesButton value="barbeque" service="Barbecue" />
+          <ServicesButton value="pool-deck" service="Pool Deck" />
+          <ServicesButton value="fountain" service="Fountain" />
         </div>
 
         <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
