@@ -11,6 +11,7 @@ Technologies Used
 * HTML5
 * CSS3
 * Gatsby
+* Cloudinary
 
 Live Demo
 -----
@@ -20,7 +21,7 @@ Try the application live at https://zion-landscaping.netlify.app.
 Features
 -----
 * User can view product services
-* User can submit inquiry request
+* User can submit inquiry requests
 
 
 
