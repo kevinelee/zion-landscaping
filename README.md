@@ -22,7 +22,6 @@ Features
 -----
 * User can view product services
 * User can submit inquiry requests
-*
 
 
 
