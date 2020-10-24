@@ -42,7 +42,7 @@ export default function Body() {
           </p>
 
           <br />
-          <a href>GET IN TOUCH</a>
+          <a href="/">GET IN TOUCH</a>
         </div>
 
         <img
