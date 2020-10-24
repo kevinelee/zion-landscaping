@@ -12,7 +12,7 @@ const GridGallery = () => {
   const [selectedButton, setSelectedButton] = useState("patio");
   const [publicId, setPublicId] = useState(null);
   const [isExpanded, toggleExpansion] = useState(false);
-  const [service, setService] = useState("Patio");
+  const [serviceSelect, setService] = useState("Patio");
 
   const { openModal, closeModal, isOpen, Modal } = useModal({
     background: "rgba(0, 0, 0, 0.5)",
@@ -29,7 +29,7 @@ const GridGallery = () => {
     return (
       <button
         value={value}
-        className="services-button m-2 hover:text-green-500"
+        className={`${service === serviceSelect ? `text-green-500` : null} services-button m-2 hover:text-green-500`}
         onClick={(e) => handleSelect(e)}
         id={service}
       >
@@ -66,13 +66,13 @@ const GridGallery = () => {
         <div
           className={`${isExpanded ? `hidden` : `block text-green-500`} lg:hidden text-center mt-2 mb-3`}
         >
-          {service}
+          {serviceSelect}
         </div>
 
         <div
           className={`${
             isExpanded ? `block` : `hidden`
-          } lg:block flex flex-col`}
+          } lg:block flex flex-col `}
         >
           <ServicesButton value="patio" service="Patio" />
           <ServicesButton value="front-yard" service="Front Yard" />
