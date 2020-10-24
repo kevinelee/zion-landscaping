@@ -1,3 +1,4 @@
+
 /* eslint react/prop-types: 0 */
 import React from "react";
 import StatCounter from './stat-counter'
@@ -26,9 +27,9 @@ export default function Stats() {
             ) 
             : null
           } 
-
         </div>
       </div>
+      {/* </div> */}
     </section>
   );
 }
