@@ -57,17 +57,18 @@ const GridGallery = () => {
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
         <button
-          className="flex mx-auto text-2xl font-semibold"
+          className={`${isExpanded ? `text-green-500` : null} flex mx-auto text-2xl font-semibold`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
         </button>
 
         <div
-          className={`${isExpanded ? `hidden` : `block`} lg:hidden text-center`}
+          className={`${isExpanded ? `hidden` : `block text-green-500`} lg:hidden text-center my-2`}
         >
           {service}
         </div>
+
         <div
           className={`${
             isExpanded ? `block` : `hidden`
