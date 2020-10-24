@@ -24,7 +24,7 @@ const GridGallery = () => {
     return (
       <button
         value={value}
-        className="services-button m-2"
+        className="services-button m-2 hover:text-green-500"
         onClick={(e) => handleSelect(e)}
       >
         {service}

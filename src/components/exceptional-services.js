@@ -18,7 +18,7 @@ export default function ExceptionalService() {
               We provide exceptional landscaping services to a wide range of
               commercial and residential properties for over 35 years, including
               large corporate environments, city parks, shopping malls and
-              appartments. Our experienced landscapers set the standard each day
+              apartments. Our experienced landscapers set the standard each day
               in landscape design, paving, hardscaping. We will whip your yard
               into shape in no time.
             </p>
