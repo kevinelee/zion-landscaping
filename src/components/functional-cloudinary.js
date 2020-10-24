@@ -11,6 +11,7 @@ const GridGallery = () => {
   const [gallery, setGallery] = useState([]);
   const [selectedButton, setSelectedButton] = useState("patio");
   const [publicId, setPublicId] = useState(null);
+  const [isExpanded, toggleExpansion] = useState(false);
 
   const { openModal, closeModal, isOpen, Modal } = useModal({
     background: "rgba(0, 0, 0, 0.5)",
@@ -51,19 +52,27 @@ const GridGallery = () => {
   return (
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
+        <button
+          className="flex justify-center"
+          onClick={() => toggleExpansion(!isExpanded)}
+        >
+          Services
+        </button>
 
-        <div className="hidden lg:block">
-          <div className="button-group flex justify-center">
-            <ServicesButton value="patio" service="Patio" />
-            <ServicesButton value="front-yard" service="Front Yard" />
-            <ServicesButton value="driveway" service="Driveway" />
-            <ServicesButton value="fire-place" service="Fire Place" />
-            <ServicesButton value="patio-cover" service="Patio Cover" />
-            <ServicesButton value="putting-green" service="Putting Green" />
-            <ServicesButton value="barbeque" service="Barbecue" />
-            <ServicesButton value="pool-deck" service="Pool Deck" />
-            <ServicesButton value="fountain" service="Fountain" />
-          </div>
+        <div
+          className={`${
+            isExpanded ? `block` : `hidden`
+          } lg:block flex flex-col flex justify-center`}
+        >
+          <ServicesButton value="patio" service="Patio" />
+          <ServicesButton value="front-yard" service="Front Yard" />
+          <ServicesButton value="driveway" service="Driveway" />
+          <ServicesButton value="fire-place" service="Fire Place" />
+          <ServicesButton value="patio-cover" service="Patio Cover" />
+          <ServicesButton value="putting-green" service="Putting Green" />
+          <ServicesButton value="barbeque" service="Barbecue" />
+          <ServicesButton value="pool-deck" service="Pool Deck" />
+          <ServicesButton value="fountain" service="Fountain" />
         </div>
 
         <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
