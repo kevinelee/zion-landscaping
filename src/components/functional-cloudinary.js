@@ -64,7 +64,7 @@ const GridGallery = () => {
         </button>
 
         <div
-          className={`${isExpanded ? `hidden` : `block text-green-500`} lg:hidden text-center my-2`}
+          className={`${isExpanded ? `hidden` : `block text-green-500`} lg:hidden text-center mt-2 mb-3`}
         >
           {service}
         </div>
