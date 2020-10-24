@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 // import Img from "gatsby-image";
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 import "regenerator-runtime/runtime";
+import Img from "react-cloudinary-lazy-image";
 // import LazyLoad from "react-lazyload";
 import useModal from "../hooks/use-modal";
 
@@ -66,12 +67,15 @@ const GridGallery = () => {
           {gallery.length > 0
             ? gallery.map((data) => {
                 return (
-                  <GalleryImage
-                    key={data.public_id}
-                    publicId={data.public_id}
-                    openModal={openModal}
-                    setPublicId={setPublicId}
-                  />
+                  <div key={data.public_id}>
+                    <GalleryImage
+                      key={data.public_id}
+                      publicId={data.public_id}
+                      openModal={openModal}
+                      setPublicId={setPublicId}
+                    />
+                    {/* <TestImg publicId={data.public_id} /> */}
+                  </div>
                 );
               })
             : null}
@@ -109,16 +113,42 @@ const GalleryImage = (props) => {
   }
 
   return (
-    <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer">
-      <Image onClick={pictureModal} publicId={publicId}>
-        <Transformation
-          crop="scale"
-          width="300"
-          height="200"
-          dpr="auto"
-          responsive_placeholder="blank"
-        />
-      </Image>
+    // <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer">
+    //   <Image onClick={pictureModal} publicId={publicId}>
+    //     <Transformation
+    //       crop="scale"
+    //       width="300"
+    //       height="200"
+    //       dpr="auto"
+    //       responsive_placeholder="blank"
+    //     />
+    //   </Image>
+    // </div>
+
+    <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer"  >
+      <Img
+        onClick={pictureModal}
+        cloudName={"stevelee"}
+        imageName={publicId}
+        fixed={{
+          width: 300,
+          height: 200,
+        }}
+        blurSize="60"
+      />
     </div>
   );
 };
+
+// const TestImg = ({ publicId }) => (
+//   <div>
+//     <Img
+//       cloudName={"stevelee"}
+//       imageName={publicId}
+//       fixed={{
+//         width: 300,
+//         height: 300,
+//       }}
+//     />
+//   </div>
+// );
