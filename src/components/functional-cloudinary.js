@@ -12,6 +12,7 @@ const GridGallery = () => {
   const [selectedButton, setSelectedButton] = useState("patio");
   const [publicId, setPublicId] = useState(null);
   const [isExpanded, toggleExpansion] = useState(false);
+  const [service, setService] = useState("Patio");
 
   const { openModal, closeModal, isOpen, Modal } = useModal({
     background: "rgba(0, 0, 0, 0.5)",
@@ -20,6 +21,8 @@ const GridGallery = () => {
   const handleSelect = (e) => {
     e.preventDefault();
     setSelectedButton(e.target.value);
+    toggleExpansion(!isExpanded);
+    setService(e.target.id);
   };
 
   const ServicesButton = ({ value, service }) => {
@@ -28,6 +31,7 @@ const GridGallery = () => {
         value={value}
         className="services-button m-2 hover:text-green-500"
         onClick={(e) => handleSelect(e)}
+        id={service}
       >
         {service}
       </button>
@@ -53,16 +57,21 @@ const GridGallery = () => {
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
         <button
-          className="flex justify-center"
+          className="flex mx-auto text-2xl font-semibold"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
         </button>
 
         <div
+          className={`${isExpanded ? `hidden` : `block`} lg:hidden text-center`}
+        >
+          {service}
+        </div>
+        <div
           className={`${
             isExpanded ? `block` : `hidden`
-          } lg:block flex flex-col flex justify-center`}
+          } lg:block flex flex-col`}
         >
           <ServicesButton value="patio" service="Patio" />
           <ServicesButton value="front-yard" service="Front Yard" />

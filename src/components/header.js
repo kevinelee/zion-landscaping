@@ -57,9 +57,7 @@ function Header() {
         </Link>
 
         <nav
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:items-center w-full md:w-auto`}
+          className={`${           isExpanded ? `block` : `hidden`          } md:block md:items-center w-full md:w-auto`}
         >
           {[
             {
