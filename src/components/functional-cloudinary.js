@@ -51,16 +51,19 @@ const GridGallery = () => {
   return (
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
-        <div className="button-group flex justify-center">
-          <ServicesButton value="patio" service="Patio" />
-          <ServicesButton value="front-yard" service="Front Yard" />
-          <ServicesButton value="driveway" service="Driveway" />
-          <ServicesButton value="fire-place" service="Fire Place" />
-          <ServicesButton value="patio-cover" service="Patio Cover" />
-          <ServicesButton value="putting-green" service="Putting Green" />
-          <ServicesButton value="barbeque" service="Barbecue" />
-          <ServicesButton value="pool-deck" service="Pool Deck" />
-          <ServicesButton value="fountain" service="Fountain" />
+
+        <div className="hidden lg:block">
+          <div className="button-group flex justify-center">
+            <ServicesButton value="patio" service="Patio" />
+            <ServicesButton value="front-yard" service="Front Yard" />
+            <ServicesButton value="driveway" service="Driveway" />
+            <ServicesButton value="fire-place" service="Fire Place" />
+            <ServicesButton value="patio-cover" service="Patio Cover" />
+            <ServicesButton value="putting-green" service="Putting Green" />
+            <ServicesButton value="barbeque" service="Barbecue" />
+            <ServicesButton value="pool-deck" service="Pool Deck" />
+            <ServicesButton value="fountain" service="Fountain" />
+          </div>
         </div>
 
         <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
