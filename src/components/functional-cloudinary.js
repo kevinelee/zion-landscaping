@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 // import Img from "gatsby-image";
-import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
+// import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
+import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
-// import LazyLoad from "react-lazyload";
 import useModal from "../hooks/use-modal";
 
 const GridGallery = () => {
   const [gallery, setGallery] = useState([]);
   const [selectedButton, setSelectedButton] = useState("patio");
   const [publicId, setPublicId] = useState(null);
+  const [isExpanded, toggleExpansion] = useState(false);
+  const [serviceSelect, setService] = useState("Patio");
 
   const { openModal, closeModal, isOpen, Modal } = useModal({
     background: "rgba(0, 0, 0, 0.5)",
@@ -19,14 +21,17 @@ const GridGallery = () => {
   const handleSelect = (e) => {
     e.preventDefault();
     setSelectedButton(e.target.value);
+    toggleExpansion(!isExpanded);
+    setService(e.target.id);
   };
 
   const ServicesButton = ({ value, service }) => {
     return (
       <button
         value={value}
-        className="services-button m-2 hover:text-green-500"
+        className={`${service === serviceSelect ? `text-green-500` : null} services-button m-2 hover:text-green-500`}
         onClick={(e) => handleSelect(e)}
+        id={service}
       >
         {service}
       </button>
@@ -51,7 +56,24 @@ const GridGallery = () => {
   return (
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
-        <div className="button-group flex justify-center">
+        <button
+          className={`${isExpanded ? `text-green-500` : null} flex mx-auto text-2xl font-semibold`}
+          onClick={() => toggleExpansion(!isExpanded)}
+        >
+          Services
+        </button>
+
+        <div
+          className={`${isExpanded ? `hidden` : `block text-green-500`} lg:hidden text-center mt-2 mb-3`}
+        >
+          {serviceSelect}
+        </div>
+
+        <div
+          className={`${
+            isExpanded ? `block` : `hidden`
+          } lg:block flex flex-col `}
+        >
           <ServicesButton value="patio" service="Patio" />
           <ServicesButton value="front-yard" service="Front Yard" />
           <ServicesButton value="driveway" service="Driveway" />
@@ -84,7 +106,7 @@ const GridGallery = () => {
           <Modal>
             <div onClick={closeModal}>X</div>
             <div style={{ width: "100%", textAlign: "center" }}>
-              <Image publicId={publicId}>
+              {/* <Image publicId={publicId}>
                 <Transformation
                   crop="scale"
                   width="1200"
@@ -92,7 +114,17 @@ const GridGallery = () => {
                   dpr="auto"
                   responsive_placeholder="blank"
                 />
-              </Image>
+              </Image> */}
+              <Img
+                publicId={publicId}
+                cloudName={"stevelee"}
+                imageName={publicId}
+                fixed={{
+                  width: 800,
+                  height: 600,
+                }}
+                blurSize={60}
+              />
             </div>
           </Modal>
         ) : null}
@@ -125,16 +157,19 @@ const GalleryImage = (props) => {
     //   </Image>
     // </div>
 
-    <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer"  >
+    <div
+      onClick={pictureModal}
+      className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer"
+    >
       <Img
-        onClick={pictureModal}
+        publicId={publicId}
         cloudName={"stevelee"}
         imageName={publicId}
         fixed={{
           width: 300,
           height: 200,
         }}
-        blurSize="60"
+        blurSize={60}
       />
     </div>
   );
