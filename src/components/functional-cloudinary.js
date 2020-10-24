@@ -112,6 +112,8 @@ const GalleryImage = (props) => {
     console.log("publicId", publicId);
   }
 
+  const sixty = parseInt(60);
+
   return (
     // <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer">
     //   <Image onClick={pictureModal} publicId={publicId}>
@@ -134,7 +136,7 @@ const GalleryImage = (props) => {
           width: 300,
           height: 200,
         }}
-        blurSize="60"
+        blurSize={sixty}
       />
     </div>
   );
