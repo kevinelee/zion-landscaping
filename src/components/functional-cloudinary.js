@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 // import Img from "gatsby-image";
-import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
+// import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
+import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
-// import LazyLoad from "react-lazyload";
 import useModal from "../hooks/use-modal";
 
 const GridGallery = () => {
@@ -84,7 +84,7 @@ const GridGallery = () => {
           <Modal>
             <div onClick={closeModal}>X</div>
             <div style={{ width: "100%", textAlign: "center" }}>
-              <Image publicId={publicId}>
+              {/* <Image publicId={publicId}>
                 <Transformation
                   crop="scale"
                   width="1200"
@@ -92,7 +92,17 @@ const GridGallery = () => {
                   dpr="auto"
                   responsive_placeholder="blank"
                 />
-              </Image>
+              </Image> */}
+              <Img
+                publicId={publicId}
+                cloudName={"stevelee"}
+                imageName={publicId}
+                fixed={{
+                  width: 800,
+                  height: 600,
+                }}
+                blurSize={60}
+              />
             </div>
           </Modal>
         ) : null}
@@ -112,8 +122,6 @@ const GalleryImage = (props) => {
     console.log("publicId", publicId);
   }
 
-  const sixty = parseInt(60);
-
   return (
     // <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer">
     //   <Image onClick={pictureModal} publicId={publicId}>
@@ -127,16 +135,19 @@ const GalleryImage = (props) => {
     //   </Image>
     // </div>
 
-    <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer"  >
+    <div
+      onClick={pictureModal}
+      className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer"
+    >
       <Img
-        onClick={pictureModal}
+        publicId={publicId}
         cloudName={"stevelee"}
         imageName={publicId}
         fixed={{
           width: 300,
           height: 200,
         }}
-        blurSize={sixty}
+        blurSize={60}
       />
     </div>
   );
