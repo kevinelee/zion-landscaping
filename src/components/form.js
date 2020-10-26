@@ -15,7 +15,7 @@ export default function Form() {
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form netlify onSubmit={handleSubmit(onSubmit)}>
       <input
         type="text"
         placeholder="First Name"
