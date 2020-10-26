@@ -72,7 +72,7 @@ const GridGallery = () => {
         <div
           className={`${
             isExpanded ? `block` : `hidden`
-          } lg:block flex flex-col `}
+          } lg:block flex flex-col text-center `}
         >
           <ServicesButton value="patio" service="Patio" />
           <ServicesButton value="front-yard" service="Front Yard" />
@@ -159,7 +159,7 @@ const GalleryImage = (props) => {
 
     <div
       onClick={pictureModal}
-      className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer"
+      className="grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer"
     >
       <Img
         publicId={publicId}
