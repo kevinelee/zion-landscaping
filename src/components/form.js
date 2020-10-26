@@ -32,7 +32,7 @@ export default function Form() {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -41,7 +41,7 @@ export default function Form() {
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
 
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   // const netlifySubmit = (e) => {
@@ -62,10 +62,10 @@ export default function Form() {
   return (
     <form
       data-netlify="true"
-      onSubmit={handleSubmit}
+      onSubmit={()=>handleSubmit()}
       name="contact"
       method="post"
-      action="/thanks/"
+      action="/"
       data-netlify-honeypot="bot-field"
     >
       <label htmlFor="firstName"></label>
