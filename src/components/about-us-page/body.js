@@ -4,7 +4,7 @@ import React from "react";
 export default function Body() {
   const YearBox = ({ year, title, paragraph }) => {
     return (
-      <div className="md:w-96 mr-4 mb-4 ">
+      <div className="md:w-1/3 mr-4 mb-4 ">
         <h1 className="mb-2 flex">
           <div className="border-2 border-gray rounded text-green-500 font-semibold text-3xl py-1 px-3 mr-2">
             {year}
@@ -46,36 +46,31 @@ export default function Body() {
         </div>
 
         <img
-          className="w-1/2 ml-8 hidden lg:block"
+          style={{ minWidth: "50%" }}
+          className="object-contain w-1/2 ml-8 hidden lg:block"
           src="https://www.houselogic.com/wp-content/uploads/2010/03/landscape-curb-appeal-retina_retina_f09021ca6edac80b70f3a5b5092c4059.jpg"
           alt="landscaping"
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-between items-center">
-        <div>
-          <YearBox
-            year="1978"
-            title="Started the Company"
-            paragraph="Almost four decades ago we started as a company with two men.  Not much later, a landscape designed joined the team adn from that point, we grew quickly."
-          />
-        </div>
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <YearBox
+          year="1978"
+          title="Started the Company"
+          paragraph="Almost four decades ago we started as a company with two men.  Not much later, a landscape designed joined the team adn from that point, we grew quickly."
+        />
 
-        <div>
-          <YearBox
-            year="1997"
-            title="Second Location"
-            paragraph="Almost four decades ago we started as a company with two men.  Not much later, a landscape designed joined the team adn from that point, we grew quickly."
-          />
-        </div>
+        <YearBox
+          year="1997"
+          title="Second Location"
+          paragraph="Almost four decades ago we started as a company with two men.  Not much later, a landscape designed joined the team adn from that point, we grew quickly."
+        />
 
-        <div>
-          <YearBox
-            year="2015"
-            title="Total of 12 Awards"
-            paragraph="Almost four decades ago we started as a company with two men.  Not much later, a landscape designed joined the team adn from that point, we grew quickly."
-          />
-        </div>
+        <YearBox
+          year="2015"
+          title="Total of 12 Awards"
+          paragraph="Almost four decades ago we started as a company with two men.  Not much later, a landscape designed joined the team adn from that point, we grew quickly."
+        />
       </div>
     </section>
   );
