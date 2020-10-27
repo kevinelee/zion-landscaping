@@ -6,6 +6,7 @@ import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
 import useModal from "../hooks/use-modal";
+import CloseIcon from "./Svg/CloseIcon";
 
 const GridGallery = () => {
   const [gallery, setGallery] = useState([]);
@@ -185,7 +186,6 @@ const GridGallery = () => {
                       openModal={openModal}
                       setPublicId={setPublicId}
                     />
-                    {/* <TestImg publicId={data.public_id} /> */}
                   </div>
                 );
               })
@@ -193,7 +193,9 @@ const GridGallery = () => {
         </div>
         {isOpen && publicId ? (
           <Modal>
-            <div onClick={closeModal}>X</div>
+            <div className="flex justify-end p-2" onClick={closeModal}>
+              <CloseIcon fill="black"/>
+            </div>
             <div style={{ width: "100%", textAlign: "center" }}>
               <Img
                 style={{ borderRadius: "4px" }}
