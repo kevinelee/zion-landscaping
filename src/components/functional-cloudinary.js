@@ -40,6 +40,36 @@ const GridGallery = () => {
     );
   };
 
+  const GalleryImage = (props) => {
+    const { publicId, openModal, setPublicId } = props;
+
+    function pictureModal(e) {
+      setPublicId(publicId);
+      openModal(e);
+      console.log("publicId", publicId);
+    }
+
+    return (
+      <div
+        onClick={pictureModal}
+        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer"
+      >
+        <Img
+          style={{ borderRadius: "3px" }}
+          className="rounded-md"
+          publicId={publicId}
+          cloudName={"stevelee"}
+          imageName={publicId}
+          fixed={{
+            width: 300,
+            height: 200,
+          }}
+          blurSize={60}
+        />
+      </div>
+    );
+  };
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -51,7 +81,7 @@ const GridGallery = () => {
       } catch (error) {
         console.log(error);
       }
-    } 
+    }
     fetchData();
   }, [selectedButton]);
 
@@ -115,7 +145,7 @@ const GridGallery = () => {
         </div>
 
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
-        
+
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
 
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
@@ -165,16 +195,8 @@ const GridGallery = () => {
           <Modal>
             <div onClick={closeModal}>X</div>
             <div style={{ width: "100%", textAlign: "center" }}>
-              {/* <Image publicId={publicId}>
-                <Transformation
-                  crop="scale"
-                  width="1200"
-                  height="800"
-                  dpr="auto"
-                  responsive_placeholder="blank"
-                />
-              </Image> */}
               <Img
+                style={{ borderRadius: "4px" }}
                 publicId={publicId}
                 cloudName={"stevelee"}
                 imageName={publicId}
@@ -193,56 +215,3 @@ const GridGallery = () => {
 };
 
 export default GridGallery;
-
-const GalleryImage = (props) => {
-  const { publicId, openModal, setPublicId } = props;
-
-  function pictureModal(e) {
-    setPublicId(publicId);
-    openModal(e);
-    console.log("publicId", publicId);
-  }
-
-  return (
-    // <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer">
-    //   <Image onClick={pictureModal} publicId={publicId}>
-    //     <Transformation
-    //       crop="scale"
-    //       width="300"
-    //       height="200"
-    //       dpr="auto"
-    //       responsive_placeholder="blank"
-    //     />
-    //   </Image>
-    // </div>
-
-    <div
-      onClick={pictureModal}
-      className="grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer"
-    >
-      <Img
-        publicId={publicId}
-        cloudName={"stevelee"}
-        imageName={publicId}
-        fixed={{
-          width: 300,
-          height: 200,
-        }}
-        blurSize={60}
-      />
-    </div>
-  );
-};
-
-// const TestImg = ({ publicId }) => (
-//   <div>
-//     <Img
-//       cloudName={"stevelee"}
-//       imageName={publicId}
-//       fixed={{
-//         width: 300,
-//         height: 300,
-//       }}
-//     />
-//   </div>
-// );
