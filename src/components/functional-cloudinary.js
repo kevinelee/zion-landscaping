@@ -56,7 +56,7 @@ const GridGallery = () => {
         className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer"
       >
         <Img
-          style={{ borderRadius: "3px" }}
+          style={{ borderRadius: "3px", transitionDuration: "150ms" }}
           className="rounded-md"
           publicId={publicId}
           cloudName={"stevelee"}
@@ -92,7 +92,7 @@ const GridGallery = () => {
         <button
           className={`${
             isExpanded ? `text-green-500` : null
-          } lg:text-black flex mx-auto text-2xl font-semibold`}
+          } lg:text-black text-xl flex mx-auto text-5xl font-semibold`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
@@ -194,7 +194,7 @@ const GridGallery = () => {
         {isOpen && publicId ? (
           <Modal>
             <div className="flex justify-end p-2" onClick={closeModal}>
-              <CloseIcon fill="black"/>
+              <CloseIcon fill="black" />
             </div>
             <div style={{ width: "100%", textAlign: "center" }}>
               <Img
