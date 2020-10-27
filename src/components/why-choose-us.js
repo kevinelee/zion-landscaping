@@ -1,41 +1,31 @@
 import React from "react";
+import Dots from "./Svg/Dots";
+import GlobeIcon from "./Svg/GlobeIcon";
+import ScaleIcon from "./Svg/ScaleIcon";
+import LightningIcon from "./Svg/LightningIcon";
+import MessageIcon from "./Svg/MessageIcon";
+import ClipboardIcon from "./Svg/ClipboardIcon";
+import CalendarIcon from "./Svg/CalendarIcon";
+
+const Skills = ({ iconSvg, title, paragraph }) => {
+  return (
+    <div className="mt-10 sm:mt-0">
+      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
+        {iconSvg}
+      </div>
+      <div className="mt-5">
+        <h4 className="text-lg leading-6 font-medium text-gray-900">{title}</h4>
+        <p className="mt-2 text-base leading-6 text-gray-400">{paragraph}</p>
+      </div>
+    </div>
+  );
+};
 
 function twoByTwo() {
   return (
     <div className="bg-gray-50 overflow-hidden">
       <div className="relative max-w-screen-xl mx-auto py-12 px-6">
-        <svg
-          className="absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
-          width="404"
-          height="784"
-          fill="none"
-          viewBox="0 0 404 784"
-        >
-          <defs>
-            <pattern
-              id="8b1b5f72-e944-4457-af67-0c6d15a99f38"
-              x="0"
-              y="0"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x="0"
-                y="0"
-                width="4"
-                height="4"
-                className="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width="404"
-            height="784"
-            fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)"
-          />
-        </svg>
+        <Dots />
 
         <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
           <div className="lg:col-span-1">
@@ -43,185 +33,45 @@ function twoByTwo() {
               Why choose us?
             </h3>
           </div>
+
           <div className="mt-10 sm:grid sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 lg:col-span-2">
-            <div>
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                {/* <!-- Heroicon name: globe-alt --> */}
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                  />
-                </svg>
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Specialized Company
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We are a landscaping company that specializes in residential
-                  and commercial landscaping
-                </p>
-              </div>
-            </div>
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                {/* <!-- Heroicon name: scale --> */}
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                  />
-                </svg>
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Licensed & Insured
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  All our landscapers are fully licensed, bonded and insured for
-                  their safety
-                </p>
-              </div>
-            </div>
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                {/* <!-- Heroicon name: lightning-bolt --> */}
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Dependable Services
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We love to take pride in the work we do. Each project is
-                  finished in time and budget
-                </p>
-              </div>
-            </div>
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                {/* <!-- Heroicon name: mail --> */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Day Scheduling
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We schedule regular appointments to visit your property on the
-                  same day and time of the week
-                </p>
-              </div>
-            </div>
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                {/* <!-- Heroicon name: mail --> */}
-                {/* <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg> */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="h-6 w-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                  />
-                </svg>
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Free Consultations
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We offer free consultations for our services, and will provide
-                  you with an actual quote
-                </p>
-              </div>
-            </div>
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                {/* <!-- Heroicon name: mail --> */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                  />
-                </svg>
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Reputable Company
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  Operating for more than 30 years, earning a repuation for
-                  service and beautiful work
-                </p>
-              </div>
-            </div>
+            <Skills
+              iconSvg={<GlobeIcon />}
+              title="Specialized Company"
+              paragraph="We are a landscaping company that specializes in residential
+                  and commercial landscaping"
+            />
+
+            <Skills
+              iconSvg={<ScaleIcon />}
+              title="Licensed & Insured"
+              paragraph="All our landscapers are fully licensed, bonded and insured for their safety"
+            />
+
+            <Skills
+              iconSvg={<LightningIcon />}
+              title="Dependable Services"
+              paragraph="We love to take pride in the work we do. Each project is finished in time and budget"
+            />
+
+            <Skills
+              iconSvg={<CalendarIcon />}
+              title="Day Scheduling"
+              paragraph="We schedule regular appointments to visit your property on the same day and time of the week"
+            />
+
+            <Skills
+              iconSvg={<MessageIcon />}
+              title="Free Consultations"
+              paragraph="We offer free consultations for our services, and will provide
+                  you with an actual quote"
+            />
+
+            <Skills
+              iconSvg={<ClipboardIcon />}
+              title="Reputable Company"
+              paragraph=" Operating for more than 30 years, earning a repuation for service and beautiful work"
+            />
           </div>
         </div>
       </div>

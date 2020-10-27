@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import CloseIcon from "./Svg/CloseIcon";
+import MenuIcon from "./Svg/MenuIcon";
 
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -20,27 +22,7 @@ function Header() {
           className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
-          {isExpanded ? (
-            // x svg
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-3 h-3 fill-current hover:fill-0"
-              viewBox="0 0 24 24"
-              fill="white"
-            >
-              <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-            </svg>
-          ) : (
-            // menu svg
-            <svg
-              className="w-3 h-3 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          )}
+          {isExpanded ? <CloseIcon /> : <MenuIcon />}
         </button>
 
         <Link to="/">
@@ -57,7 +39,9 @@ function Header() {
         </Link>
 
         <nav
-          className={`${           isExpanded ? `block` : `hidden`          } md:block md:items-center w-full md:w-auto`}
+          className={`${
+            isExpanded ? `block` : `hidden`
+          } md:block md:items-center w-full md:w-auto`}
         >
           {[
             {
