@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-// import Img from "gatsby-image";
-// import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
@@ -53,10 +51,11 @@ const GridGallery = () => {
     return (
       <div
         onClick={pictureModal}
-        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer"
+        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative"
       >
+      <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl"> + </div>
         <Img
-          style={{ borderRadius: "3px", transitionDuration: "150ms" }}
+          style={{ borderRadius: "3px" }}
           className="rounded-md"
           publicId={publicId}
           cloudName={"stevelee"}

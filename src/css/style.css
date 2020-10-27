@@ -132,9 +132,18 @@
 }
 
 .grid-gallery__image {
-  transition: all 500ms ease-in-out
+  transition: all 500ms ease-in-out;
 }
 
 .grid-gallery__image:hover {
   opacity: 0.75;
+}
+
+.grid-gallery-image-modal {
+  opacity: 0;
+}
+
+.grid-gallery-image-modal:hover {
+  opacity: 1;
+  transition: all 500ms ease-in-out;
 }
