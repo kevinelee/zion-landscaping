@@ -51,7 +51,7 @@ const GridGallery = () => {
     return (
       <div
         onClick={pictureModal}
-        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative"
+        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative pointer-events-none md:pointer-events-auto"
       >
         <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
           +
@@ -195,7 +195,7 @@ const GridGallery = () => {
         {isOpen && publicId ? (
           <Modal>
             <div className="flex justify-end p-2" onClick={closeModal}>
-              <CloseIcon fill="black" />
+              <CloseIcon className="w-6 h-6" fill="black" />
             </div>
             <div style={{ width: "100%", textAlign: "center" }}>
               <Img
