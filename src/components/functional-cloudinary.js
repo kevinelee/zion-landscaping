@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-// import Img from "gatsby-image";
-// import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
 import useModal from "../hooks/use-modal";
+import CloseIcon from "./Svg/CloseIcon";
 
 const GridGallery = () => {
   const [gallery, setGallery] = useState([]);
@@ -30,13 +29,46 @@ const GridGallery = () => {
       <button
         value={value}
         className={`${
-          service === serviceSelect ? `text-green-500` : null
-        } services-button m-2 hover:text-green-500`}
+          service === serviceSelect ? `text-green-500 lg:border-2 border-green-500 rounded` : null
+        } services-button lg:px-3 py-1 mx-1 hover:text-green-500`}
         onClick={(e) => handleSelect(e)}
         id={service}
       >
         {service}
       </button>
+    );
+  };
+
+  const GalleryImage = (props) => {
+    const { publicId, openModal, setPublicId } = props;
+
+    function pictureModal(e) {
+      setPublicId(publicId);
+      openModal(e);
+      console.log("publicId", publicId);
+    }
+
+    return (
+      <div
+        onClick={pictureModal}
+        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative"
+      >
+        <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
+          +
+        </div>
+        <Img
+          style={{ borderRadius: "3px" }}
+          className="rounded-md"
+          publicId={publicId}
+          cloudName={"stevelee"}
+          imageName={publicId}
+          fixed={{
+            width: 300,
+            height: 200,
+          }}
+          blurSize={60}
+        />
+      </div>
     );
   };
 
@@ -51,7 +83,7 @@ const GridGallery = () => {
       } catch (error) {
         console.log(error);
       }
-    } 
+    }
     fetchData();
   }, [selectedButton]);
 
@@ -61,13 +93,13 @@ const GridGallery = () => {
         <button
           className={`${
             isExpanded ? `text-green-500` : null
-          } lg:text-black flex mx-auto text-2xl font-semibold`}
+          } lg:text-black text-xl flex mx-auto text-5xl font-semibold mb-1`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
         </button>
 
-        <div className="relative inline-block text-left">
+        {/* <div className="relative inline-block text-left">
           <div>
             <span className="rounded-md shadow-sm">
               <button
@@ -112,10 +144,10 @@ const GridGallery = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
-        
+
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
 
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
@@ -155,7 +187,6 @@ const GridGallery = () => {
                       openModal={openModal}
                       setPublicId={setPublicId}
                     />
-                    {/* <TestImg publicId={data.public_id} /> */}
                   </div>
                 );
               })
@@ -163,18 +194,12 @@ const GridGallery = () => {
         </div>
         {isOpen && publicId ? (
           <Modal>
-            <div onClick={closeModal}>X</div>
+            <div className="flex justify-end p-2" onClick={closeModal}>
+              <CloseIcon fill="black" />
+            </div>
             <div style={{ width: "100%", textAlign: "center" }}>
-              {/* <Image publicId={publicId}>
-                <Transformation
-                  crop="scale"
-                  width="1200"
-                  height="800"
-                  dpr="auto"
-                  responsive_placeholder="blank"
-                />
-              </Image> */}
               <Img
+                style={{ borderRadius: "4px" }}
                 publicId={publicId}
                 cloudName={"stevelee"}
                 imageName={publicId}
@@ -193,56 +218,3 @@ const GridGallery = () => {
 };
 
 export default GridGallery;
-
-const GalleryImage = (props) => {
-  const { publicId, openModal, setPublicId } = props;
-
-  function pictureModal(e) {
-    setPublicId(publicId);
-    openModal(e);
-    console.log("publicId", publicId);
-  }
-
-  return (
-    // <div className="grid-gallery__image mx-auto m-2 lg:m-4 gap-1 cursor-pointer">
-    //   <Image onClick={pictureModal} publicId={publicId}>
-    //     <Transformation
-    //       crop="scale"
-    //       width="300"
-    //       height="200"
-    //       dpr="auto"
-    //       responsive_placeholder="blank"
-    //     />
-    //   </Image>
-    // </div>
-
-    <div
-      onClick={pictureModal}
-      className="grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer"
-    >
-      <Img
-        publicId={publicId}
-        cloudName={"stevelee"}
-        imageName={publicId}
-        fixed={{
-          width: 300,
-          height: 200,
-        }}
-        blurSize={60}
-      />
-    </div>
-  );
-};
-
-// const TestImg = ({ publicId }) => (
-//   <div>
-//     <Img
-//       cloudName={"stevelee"}
-//       imageName={publicId}
-//       fixed={{
-//         width: 300,
-//         height: 300,
-//       }}
-//     />
-//   </div>
-// );

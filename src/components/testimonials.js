@@ -41,7 +41,7 @@ function Testimonials() {
                   <div
                     key={testimonial.name}
                     onClick={() => setTestimonial(testimonial)}
-                    className="h-16 flex justify-center items-center border-2 m-2 hover:border-gray-400  rounded-md px-4"
+                    className="h-16 flex justify-center items-center border-2 m-2 hover:border-gray-400  rounded-md px-4 cursor-pointer"
                   >
                     <img
                       src={testimonial.image}
