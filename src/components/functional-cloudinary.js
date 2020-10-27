@@ -29,8 +29,8 @@ const GridGallery = () => {
       <button
         value={value}
         className={`${
-          service === serviceSelect ? `text-green-500 border-2 border-green-500 rounded` : null
-        } services-button px-3 py-1 mx-1 hover:text-green-500`}
+          service === serviceSelect ? `text-green-500 lg:border-2 border-green-500 rounded` : null
+        } services-button lg:px-3 py-1 mx-1 hover:text-green-500`}
         onClick={(e) => handleSelect(e)}
         id={service}
       >
@@ -93,7 +93,7 @@ const GridGallery = () => {
         <button
           className={`${
             isExpanded ? `text-green-500` : null
-          } lg:text-black text-xl flex mx-auto text-5xl font-semibold`}
+          } lg:text-black text-xl flex mx-auto text-5xl font-semibold mb-1`}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
