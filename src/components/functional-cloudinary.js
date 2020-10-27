@@ -29,8 +29,8 @@ const GridGallery = () => {
       <button
         value={value}
         className={`${
-          service === serviceSelect ? `text-green-500` : null
-        } services-button m-2 hover:text-green-500`}
+          service === serviceSelect ? `text-green-500 border-2 border-green-500 rounded` : null
+        } services-button px-3 py-1 mx-1 hover:text-green-500`}
         onClick={(e) => handleSelect(e)}
         id={service}
       >
@@ -53,7 +53,9 @@ const GridGallery = () => {
         onClick={pictureModal}
         className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative"
       >
-      <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl"> + </div>
+        <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
+          +
+        </div>
         <Img
           style={{ borderRadius: "3px" }}
           className="rounded-md"
@@ -97,7 +99,7 @@ const GridGallery = () => {
           Services
         </button>
 
-        <div className="relative inline-block text-left">
+        {/* <div className="relative inline-block text-left">
           <div>
             <span className="rounded-md shadow-sm">
               <button
@@ -142,7 +144,7 @@ const GridGallery = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
 
