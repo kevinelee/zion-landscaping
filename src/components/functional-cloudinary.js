@@ -5,6 +5,8 @@ import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
 import useModal from "../hooks/use-modal";
 import CloseIcon from "./Svg/CloseIcon";
+// import DropDown from "./dropdown";
+import DropDown2 from "./dropdown2";
 
 const GridGallery = () => {
   const [gallery, setGallery] = useState([]);
@@ -29,7 +31,9 @@ const GridGallery = () => {
       <button
         value={value}
         className={`${
-          service === serviceSelect ? `text-green-500 lg:border-2 border-green-500 rounded` : null
+          service === serviceSelect
+            ? `text-green-500 lg:border-2 border-green-500 rounded`
+            : null
         } services-button lg:px-3 py-1 mx-1 hover:text-green-500`}
         onClick={(e) => handleSelect(e)}
         id={service}
@@ -90,67 +94,25 @@ const GridGallery = () => {
   return (
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
-        <button
+        <div
           className={`${
             isExpanded ? `text-green-500` : null
-          } lg:text-black text-xl flex mx-auto text-5xl font-semibold mb-1`}
-          onClick={() => toggleExpansion(!isExpanded)}
+          } lg:text-black text-xl lg:flex mx-auto text-5xl font-semibold mb-1 hidden`}
+          // onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
-        </button>
+        </div>
 
-        {/* <div className="relative inline-block text-left">
-          <div>
-            <span className="rounded-md shadow-sm">
-              <button
-                type="button"
-                className="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
-                id="options-menu"
-                aria-haspopup="true"
-                aria-expanded="true"
-              >
-                <svg
-                  className="-mr-1 ml-2 h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </span>
-          </div>
-
-          <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg">
-            <div className="rounded-md bg-white shadow-xs">
-              <div
-                className="py-1"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="options-menu"
-              >
-                <ServicesButton value="patio" service="Patio" />
-                <ServicesButton value="front-yard" service="Front Yard" />
-                <ServicesButton value="driveway" service="Driveway" />
-                <ServicesButton value="patio-cover" service="Patio Cover" />
-                <ServicesButton value="putting-green" service="Putting Green" />
-                <ServicesButton value="barbeque" service="Barbecue" />
-                <ServicesButton value="pool-deck" service="Pool Deck" />
-                <ServicesButton value="fountain" service="Fountain" />
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
-
-        {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
-
-        {/* BREAKBREAKBREAKBREAKBREAKBREAK */}
+        <DropDown2>
+          <ServicesButton value="patio" service="Patio" />
+          <ServicesButton value="front-yard" service="Front Yard" />
+          <ServicesButton value="driveway" service="Driveway" />
+          <ServicesButton value="patio-cover" service="Patio Cover" />
+          <ServicesButton value="putting-green" service="Putting Green" />
+          <ServicesButton value="barbeque" service="Barbecue" />
+          <ServicesButton value="pool-deck" service="Pool Deck" />
+          <ServicesButton value="fountain" service="Fountain" />
+        </DropDown2>
 
         <div
           className={`${
@@ -160,11 +122,7 @@ const GridGallery = () => {
           {serviceSelect}
         </div>
 
-        <div
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } lg:block flex flex-col text-center `}
-        >
+        <div className={`hidden lg:block flex flex-col text-center `}>
           <ServicesButton value="patio" service="Patio" />
           <ServicesButton value="front-yard" service="Front Yard" />
           <ServicesButton value="driveway" service="Driveway" />
