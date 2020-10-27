@@ -1,6 +1,6 @@
 import * as React from "react"
 
-function MenuIcon(props) {
+export default function MenuIcon(props) {
   return (
     <svg viewBox="0 0 20 20" {...props}>
       <title>{"Menu"}</title>
@@ -9,4 +9,3 @@ function MenuIcon(props) {
   )
 }
 
-export default MenuIcon;

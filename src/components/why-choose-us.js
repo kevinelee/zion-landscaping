@@ -7,6 +7,20 @@ import MessageIcon from "./Svg/MessageIcon";
 import ClipboardIcon from "./Svg/ClipboardIcon";
 import CalendarIcon from "./Svg/CalendarIcon";
 
+const Skills = ({ iconSvg, title, paragraph }) => {
+  return (
+    <div className="mt-10 sm:mt-0">
+      <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
+        {iconSvg}
+      </div>
+      <div className="mt-5">
+        <h4 className="text-lg leading-6 font-medium text-gray-900">{title}</h4>
+        <p className="mt-2 text-base leading-6 text-gray-400">{paragraph}</p>
+      </div>
+    </div>
+  );
+};
+
 function twoByTwo() {
   return (
     <div className="bg-gray-50 overflow-hidden">
@@ -21,95 +35,43 @@ function twoByTwo() {
           </div>
 
           <div className="mt-10 sm:grid sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 lg:col-span-2">
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                <GlobeIcon />
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Specialized Company
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We are a landscaping company that specializes in residential
-                  and commercial landscaping
-                </p>
-              </div>
-            </div>
+            <Skills
+              iconSvg={<GlobeIcon />}
+              title="Specialized Company"
+              paragraph="We are a landscaping company that specializes in residential
+                  and commercial landscaping"
+            />
 
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                <ScaleIcon />
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Licensed & Insured
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  All our landscapers are fully licensed, bonded and insured for
-                  their safety
-                </p>
-              </div>
-            </div>
+            <Skills
+              iconSvg={<ScaleIcon />}
+              title="Licensed & Insured"
+              paragraph="All our landscapers are fully licensed, bonded and insured for their safety"
+            />
 
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                <LightningIcon />
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Dependable Services
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We love to take pride in the work we do. Each project is
-                  finished in time and budget
-                </p>
-              </div>
-            </div>
+            <Skills
+              iconSvg={<LightningIcon />}
+              title="Dependable Services"
+              paragraph="We love to take pride in the work we do. Each project is finished in time and budget"
+            />
 
-            <div className="mt-10 sm:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-                <CalendarIcon />
-              </div>
-              <div className="mt-5">
-                <h4 className="text-lg leading-6 font-medium text-gray-900">
-                  Day Scheduling
-                </h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">
-                  We schedule regular appointments to visit your property on the
-                  same day and time of the week
-                </p>
-              </div>
-            </div>
-          </div>
+            <Skills
+              iconSvg={<CalendarIcon />}
+              title="Day Scheduling"
+              paragraph="We schedule regular appointments to visit your property on the same day and time of the week"
+            />
 
-          <div className="mt-10 sm:mt-0">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-              <MessageIcon />
-            </div>
-            <div className="mt-5">
-              <h4 className="text-lg leading-6 font-medium text-gray-900">
-                Free Consultations
-              </h4>
-              <p className="mt-2 text-base leading-6 text-gray-400">
-                We offer free consultations for our services, and will provide
-                you with an actual quote
-              </p>
-            </div>
-          </div>
+            <Skills
+              iconSvg={<MessageIcon />}
+              title="Free Consultations"
+              paragraph="We offer free consultations for our services, and will provide
+                  you with an actual quote"
+            />
 
-          <div className="mt-10 sm:mt-0">
-            <div className="flex items-center justify-center h-12 w-12 rounded-md bg-green-400 text-white">
-              <ClipboardIcon />
-            </div>
-            <div className="mt-5">
-              <h4 className="text-lg leading-6 font-medium text-gray-900">
-                Reputable Company
-              </h4>
-              <p className="mt-2 text-base leading-6 text-gray-400">
-                Operating for more than 30 years, earning a repuation for
-                service and beautiful work
-              </p>
-            </div>
+            <Skills
+              iconSvg={<ClipboardIcon />}
+              title="Reputable Company"
+              paragraph=" Operating for more than 30 years, earning a repuation for service and beautiful work"
+            />
           </div>
         </div>
       </div>
