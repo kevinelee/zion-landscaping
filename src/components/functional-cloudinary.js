@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
 import { CloudinaryContext } from "cloudinary-react";
@@ -5,8 +6,7 @@ import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
 import useModal from "../hooks/use-modal";
 import CloseIcon from "./Svg/CloseIcon";
-// import DropDown from "./dropdown";
-import DropDown2 from "./dropdown2";
+import DropDown from "./dropdown";
 
 const GridGallery = () => {
   const [gallery, setGallery] = useState([]);
@@ -91,6 +91,17 @@ const GridGallery = () => {
     fetchData();
   }, [selectedButton]);
 
+  const ServicesArr = [
+    <ServicesButton value="patio" service="Patio" />,
+    <ServicesButton value="front-yard" service="Front Yard" />,
+    <ServicesButton value="driveway" service="Driveway" />,
+    <ServicesButton value="patio-cover" service="Patio Cover" />,
+    <ServicesButton value="putting-green" service="Putting Green" />,
+    <ServicesButton value="barbeque" service="Barbecue" />,
+    <ServicesButton value="pool-deck" service="Pool Deck" />,
+    <ServicesButton value="fountain" service="Fountain" />,
+  ];
+
   return (
     <section className="max-w-7xl flex justify-center mx-auto">
       <CloudinaryContext cloudName="stevelee">
@@ -103,21 +114,11 @@ const GridGallery = () => {
           Services
         </div>
 
-        <DropDown2>
-          <ServicesButton value="patio" service="Patio" />
-          <ServicesButton value="front-yard" service="Front Yard" />
-          <ServicesButton value="driveway" service="Driveway" />
-          <ServicesButton value="patio-cover" service="Patio Cover" />
-          <ServicesButton value="putting-green" service="Putting Green" />
-          <ServicesButton value="barbeque" service="Barbecue" />
-          <ServicesButton value="pool-deck" service="Pool Deck" />
-          <ServicesButton value="fountain" service="Fountain" />
-        </DropDown2>
+        <DropDown services={ServicesArr} />
 
         <div
-          className={`${
-            isExpanded ? `hidden` : `block text-green-500`
-          } lg:hidden text-center mt-2 mb-3`}
+          className={`block text-green-500
+           lg:hidden text-center mt-4 mb-3`}
         >
           {serviceSelect}
         </div>
