@@ -10,7 +10,8 @@ function ServicesPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Contact"
       />
-      <section className="px-4 py-8">
+
+      <section className="px-4 py-8 ">
         <GridGallery />
       </section>
     </Layout>

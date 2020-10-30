@@ -2,14 +2,7 @@
 
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-// import { navigate } from "gatsby-link";
 import "../css/form.css";
-
-// function encode(data) {
-//   return Object.keys(data)
-//     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-//     .join("&");
-// }
 
 export default function Form() {
   const { register, errors } = useForm();
@@ -43,21 +36,6 @@ export default function Form() {
 
     // e.preventDefault();
   };
-
-  // const netlifySubmit = (e) => {
-  //   e.preventDefault();
-  //   const form = e.target;
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({
-  //       "form-name": form.getAttribute("name"),
-  //       ...state,
-  //     }),
-  //   })
-  //     .then(() => navigate(form.getAttribute("action")))
-  //     .catch((error) => alert(error));
-  // };
 
   return (
     <form
