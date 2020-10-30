@@ -1,19 +1,30 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
 import useModal from "../hooks/use-modal";
 import CloseIcon from "./Svg/CloseIcon";
-import DropDown from "./dropdown";
+// import DropDown from "./dropdown";
+import DropdownSelect from "./downshift";
+import { useQuery } from "react-query";
 
 const GridGallery = () => {
-  const [gallery, setGallery] = useState([]);
-  const [selectedButton, setSelectedButton] = useState("patio");
   const [publicId, setPublicId] = useState(null);
   const [isExpanded, toggleExpansion] = useState(false);
-  const [serviceSelect, setService] = useState("Patio");
+  const [service, setService] = useState("Patio");
+
+  const services = [
+    "Patio",
+    "Front Yard",
+    "Driveway",
+    "Patio Cover",
+    "Putting Green",
+    "Barbecue",
+    "Pool Deck",
+    "Fountain",
+  ];
 
   const { openModal, closeModal, isOpen, Modal } = useModal({
     background: "rgba(0, 0, 0, 0.5)",
@@ -21,86 +32,40 @@ const GridGallery = () => {
 
   const handleSelect = (e) => {
     e.preventDefault();
-    setSelectedButton(e.target.value);
     toggleExpansion(!isExpanded);
     setService(e.target.id);
   };
 
-  const ServicesButton = ({ value, service }) => {
-    return (
-      <button
-        value={value}
-        className={`${
-          service === serviceSelect
-            ? `text-green-500 lg:border-2 border-green-500 rounded`
-            : null
-        } services-button lg:px-3 py-1 mx-1 hover:text-green-500`}
-        onClick={(e) => handleSelect(e)}
-        id={service}
-      >
-        {service}
-      </button>
-    );
-  };
+  async function fetchData(key, { selectedItem }) {
+    try {
+      const res = await fetch(
+        `https://res.cloudinary.com/stevelee/image/list/${selectedItem}.json`
+      );
+      const galleryData = await res.json();
+      // console.log({ selectedItem, galleryData });
+      return galleryData.resources;
+    } catch (error) {
+      console.log(key, error);
+    }
+  }
 
-  const GalleryImage = (props) => {
-    const { publicId, openModal, setPublicId } = props;
-
-    function pictureModal(e) {
-      setPublicId(publicId);
-      openModal(e);
-      console.log("publicId", publicId);
+  function formatName(name) {
+    if (name === "Barbecue") {
+      return "barbeque";
+    }
+    if (!name) {
+      return null;
     }
 
-    return (
-      <div
-        onClick={pictureModal}
-        className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative pointer-events-none md:pointer-events-auto"
-      >
-        <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
-          +
-        </div>
-        <Img
-          style={{ borderRadius: "3px" }}
-          className="rounded-md"
-          publicId={publicId}
-          cloudName={"stevelee"}
-          imageName={publicId}
-          fixed={{
-            width: 300,
-            height: 200,
-          }}
-          blurSize={60}
-        />
-      </div>
-    );
-  };
+    return name.toLowerCase().replace(" ", "-");
+  }
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await fetch(
-          `https://res.cloudinary.com/stevelee/image/list/${selectedButton}.json`
-        );
-        const galleryData = await res.json();
-        setGallery(galleryData.resources);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-  }, [selectedButton]);
+  const formattedName = formatName(service);
 
-  const ServicesArr = [
-    <ServicesButton value="patio" service="Patio" />,
-    <ServicesButton value="front-yard" service="Front Yard" />,
-    <ServicesButton value="driveway" service="Driveway" />,
-    <ServicesButton value="patio-cover" service="Patio Cover" />,
-    <ServicesButton value="putting-green" service="Putting Green" />,
-    <ServicesButton value="barbeque" service="Barbecue" />,
-    <ServicesButton value="pool-deck" service="Pool Deck" />,
-    <ServicesButton value="fountain" service="Fountain" />,
-  ];
+  const { isLoading, isError, data } = useQuery(
+    ["services", { selectedItem: formattedName }],
+    fetchData
+  );
 
   return (
     <section className="max-w-7xl flex justify-center mx-auto">
@@ -114,43 +79,96 @@ const GridGallery = () => {
           Services
         </div>
 
-        <DropDown services={ServicesArr} />
+        <DropdownSelect
+          initialValue={service}
+          setValue={setService}
+          items={services}
+        />
+        {/* <DropDown services={ServicesArr} /> */}
 
         <div
           className={`block text-green-500
            lg:hidden text-center mt-4 mb-3`}
         >
-          {serviceSelect}
+          {service}
         </div>
 
         <div className={`hidden lg:block flex flex-col text-center `}>
-          <ServicesButton value="patio" service="Patio" />
-          <ServicesButton value="front-yard" service="Front Yard" />
-          <ServicesButton value="driveway" service="Driveway" />
-          <ServicesButton value="fire-place" service="Fire Place" />
-          <ServicesButton value="patio-cover" service="Patio Cover" />
-          <ServicesButton value="putting-green" service="Putting Green" />
-          <ServicesButton value="barbeque" service="Barbecue" />
-          <ServicesButton value="pool-deck" service="Pool Deck" />
-          <ServicesButton value="fountain" service="Fountain" />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "patio"}
+            value="patio"
+            svc="Patio"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "front-yard"}
+            value="front-yard"
+            svc="Front Yard"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "driveway"}
+            value="driveway"
+            svc="Driveway"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "fire-place"}
+            value="fire-place"
+            svc="Fire Place"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "patio-cover"}
+            value="patio-cover"
+            svc="Patio Cover"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "putting-green"}
+            value="putting-green"
+            svc="Putting Green"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "barbeque"}
+            value="barbeque"
+            svc="Barbecue"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "pool-deck"}
+            value="pool-deck"
+            svc="Pool Deck"
+          />
+          <ServicesButton
+            handleSelect={handleSelect}
+            isActive={service === "fountain"}
+            value="fountain"
+            svc="Fountain"
+          />
         </div>
 
         <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-          {gallery.length > 0
-            ? gallery.map((data) => {
-                return (
-                  <div key={data.public_id}>
-                    <GalleryImage
-                      key={data.public_id}
-                      publicId={data.public_id}
-                      openModal={openModal}
-                      setPublicId={setPublicId}
-                    />
-                  </div>
-                );
-              })
-            : null}
+          {isLoading ? (
+            <div>Loading</div>
+          ) : isError ? (
+            <div>error!</div>
+          ) : data && data.length > 0 ? (
+            data.map((data) => {
+              return (
+                <GalleryImage
+                  key={data.public_id}
+                  publicId={data.public_id}
+                  openModal={openModal}
+                  setPublicId={setPublicId}
+                />
+              );
+            })
+          ) : null}
         </div>
+
         {isOpen && publicId ? (
           <Modal>
             <div className="flex justify-end p-2" onClick={closeModal}>
@@ -177,3 +195,50 @@ const GridGallery = () => {
 };
 
 export default GridGallery;
+
+const ServicesButton = ({ value, svc, isActive, handleSelect }) => {
+  return (
+    <button
+      value={value}
+      className={`${
+        isActive ? `text-green-500 lg:border-2 border-green-500 rounded` : null
+      } services-button lg:px-3 py-1 mx-1 hover:text-green-500`}
+      onClick={(e) => handleSelect(e)}
+      id={svc}
+    >
+      {svc}
+    </button>
+  );
+};
+
+const GalleryImage = (props) => {
+  const { publicId, openModal, setPublicId } = props;
+
+  function pictureModal(e) {
+    setPublicId(publicId);
+    openModal(e);
+  }
+
+  return (
+    <div
+      onClick={pictureModal}
+      className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative pointer-events-none md:pointer-events-auto"
+    >
+      <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
+        +
+      </div>
+      <Img
+        style={{ borderRadius: "3px" }}
+        className="rounded-md"
+        publicId={publicId}
+        cloudName={"stevelee"}
+        imageName={publicId}
+        fixed={{
+          width: 300,
+          height: 200,
+        }}
+        blurSize={60}
+      />
+    </div>
+  );
+};
