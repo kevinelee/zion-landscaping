@@ -21,14 +21,14 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
   return (
     <div className="lg:hidden flex flex-col items-center">
       {/* <label {...getLabelProps()}>Choose an element:</label> */}
-      <button className="text-green-500" type="button" {...getToggleButtonProps()}>
+      <button className="text-green-500 px-8 py-2" type="button" {...getToggleButtonProps()}>
         {selectedItem || initialValue}
       </button>
       <ul {...getMenuProps()}>
         {isOpen &&
           items.map((item, index) => (
             <li
-              className="px-8"
+              className="px-8 py-1"
               style={
                 highlightedIndex === index ? { backgroundColor: "#bde4ff", color: "#48bb78" } : {}
               }

@@ -1,11 +1,9 @@
-
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import GridGallery from "../components/functional-cloudinary";
-import React  from "react";
+import GridGallery from "../components/services-page/index";
+import React from "react";
 
 function ServicesPage() {
-
   return (
     <Layout>
       <SEO

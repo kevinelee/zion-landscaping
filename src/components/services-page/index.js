@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import { CloudinaryContext } from "cloudinary-react";
 import "regenerator-runtime/runtime";
 import Img from "react-cloudinary-lazy-image";
-import useModal from "../hooks/use-modal";
-import CloseIcon from "./Svg/CloseIcon";
-// import DropDown from "./dropdown";
+import useModal from "../../hooks/use-modal";
+import CloseIcon from "../Svg/CloseIcon";
 import DropdownSelect from "./downshift";
 import { useQuery } from "react-query";
+import ServicesButton from "./ServicesButton";
+import GalleryImage from "./GalleryImage";
 
 const GridGallery = () => {
   const [publicId, setPublicId] = useState(null);
@@ -195,49 +196,4 @@ const GridGallery = () => {
 
 export default GridGallery;
 
-const ServicesButton = ({ value, svc, isActive, handleSelect }) => {
-  return (
-    <button
-      value={value}
-      className={`${
-        isActive ? `text-green-500 lg:border-2 border-green-500 rounded` : null
-      } services-button lg:px-3 py-1 mx-1 hover:text-green-500`}
-      onClick={(e) => handleSelect(e)}
-      id={svc}
-    >
-      {svc}
-    </button>
-  );
-};
 
-const GalleryImage = (props) => {
-  const { publicId, openModal, setPublicId } = props;
-
-  function pictureModal(e) {
-    setPublicId(publicId);
-    openModal(e);
-  }
-
-  return (
-    <div
-      onClick={pictureModal}
-      className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative pointer-events-none md:pointer-events-auto"
-    >
-      <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
-        +
-      </div>
-      <Img
-        style={{ borderRadius: "3px" }}
-        className="rounded-md"
-        publicId={publicId}
-        cloudName={"stevelee"}
-        imageName={publicId}
-        fixed={{
-          width: 300,
-          height: 200,
-        }}
-        blurSize={60}
-      />
-    </div>
-  );
-};
