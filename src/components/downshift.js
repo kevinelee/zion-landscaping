@@ -6,7 +6,7 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
     isOpen,
     selectedItem,
     getToggleButtonProps,
-    getLabelProps,
+    // getLabelProps,
     getMenuProps,
     highlightedIndex,
     getItemProps,
@@ -19,8 +19,8 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
   }, [selectedItem]);
 
   return (
-    <div>
-      <label {...getLabelProps()}>Choose an element:</label>
+    <div className="lg:hidden flex flex-col items-center">
+      {/* <label {...getLabelProps()}>Choose an element:</label> */}
       <button type="button" {...getToggleButtonProps()}>
         {selectedItem || initialValue}
       </button>

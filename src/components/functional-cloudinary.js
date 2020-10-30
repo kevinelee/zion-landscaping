@@ -73,25 +73,27 @@ const GridGallery = () => {
         <div
           className={`${
             isExpanded ? `text-green-500` : null
-          } lg:text-black text-xl lg:flex mx-auto text-5xl font-semibold mb-1 hidden`}
+          } lg:text-black text-xl mx-auto text-5xl font-semibold mb-1 px-3`}
           // onClick={() => toggleExpansion(!isExpanded)}
         >
           Services
         </div>
 
-        <DropdownSelect
-          initialValue={service}
-          setValue={setService}
-          items={services}
-        />
+        
+          <DropdownSelect
+            initialValue={service}
+            setValue={setService}
+            items={services}
+          />
+      
         {/* <DropDown services={ServicesArr} /> */}
 
-        <div
+        {/* <div
           className={`block text-green-500
            lg:hidden text-center mt-4 mb-3`}
         >
           {service}
-        </div>
+        </div> */}
 
         <div className={`hidden lg:block flex flex-col text-center `}>
           <ServicesButton
@@ -152,7 +154,7 @@ const GridGallery = () => {
 
         <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {isLoading ? (
-            <div>Loading</div>
+            <div className="mx-auto text-center">Loading...</div>
           ) : isError ? (
             <div>error!</div>
           ) : data && data.length > 0 ? (
