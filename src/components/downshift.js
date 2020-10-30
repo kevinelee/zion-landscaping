@@ -21,15 +21,16 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
   return (
     <div className="lg:hidden flex flex-col items-center">
       {/* <label {...getLabelProps()}>Choose an element:</label> */}
-      <button type="button" {...getToggleButtonProps()}>
+      <button className="text-green-500" type="button" {...getToggleButtonProps()}>
         {selectedItem || initialValue}
       </button>
       <ul {...getMenuProps()}>
         {isOpen &&
           items.map((item, index) => (
             <li
+              className="px-8"
               style={
-                highlightedIndex === index ? { backgroundColor: "#bde4ff" } : {}
+                highlightedIndex === index ? { backgroundColor: "#bde4ff", color: "#48bb78" } : {}
               }
               key={`${item}${index}`}
               {...getItemProps({ item, index })}
