@@ -195,5 +195,3 @@ const GridGallery = () => {
 };
 
 export default GridGallery;
-
-

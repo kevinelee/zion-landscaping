@@ -47,7 +47,7 @@ export default function Body() {
 
         <img
           style={{ minWidth: "50%" }}
-          className="object-contain w-1/2 ml-8 hidden lg:block"
+          className="object-contain w-1/2 ml-8 hidden lg:flex"
           src="https://www.houselogic.com/wp-content/uploads/2010/03/landscape-curb-appeal-retina_retina_f09021ca6edac80b70f3a5b5092c4059.jpg"
           alt="landscaping"
         />
