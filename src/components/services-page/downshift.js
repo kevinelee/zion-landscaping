@@ -22,7 +22,7 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
   return (
     <div className="lg:hidden flex flex-col mb-2 w-1/2 md:w-1/4">
       {/* <label {...getLabelProps()}>Choose an element:</label> */}
-      <button className="text-green-500 pl-1 pr-6 py-2 mb-2 flex flex-row outline-none" type="button" {...getToggleButtonProps()}>
+      <button className="text-green-500 pl-1 pr-6 py-2 mb-2 flex flex-row outline-none downshift-button" type="button" {...getToggleButtonProps()}>
         {selectedItem || initialValue} 
         <ChevronIcon/>
       </button>
