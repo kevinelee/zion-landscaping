@@ -29,7 +29,7 @@ function Testimonials() {
   const [testimonial, setTestimonial] = useState(testimonials[0]);
 
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gray-50  px-4 lg:px-2">
       <h3 className="max-w-screen-xl mx-auto text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 lg:py-8 px-4 md:px-0">
         Testimonials
       </h3>

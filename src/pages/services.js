@@ -11,7 +11,7 @@ function ServicesPage() {
         title="Contact"
       />
 
-      <section className="px-4 py-8 ">
+      <section className="px-4 lg:px-2 py-8 ">
         <GridGallery />
       </section>
     </Layout>

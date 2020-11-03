@@ -82,7 +82,7 @@ const GridGallery = () => {
           items={services}
         />
 
-        <div className={`hidden lg:flex text-center justify-around`}>
+        <div className={`hidden lg:flex text-center justify-around max-w-5xl mx-auto`}>
           <ServicesButton
             handleSelect={handleSelect}
             isActive={service === "Patio"}
@@ -139,7 +139,7 @@ const GridGallery = () => {
           />
         </div>
 
-        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center">
+        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center max-w-5xl mx-auto">
           {isLoading ? (
             <div className="mx-auto text-center">Loading...</div>
           ) : isError ? (

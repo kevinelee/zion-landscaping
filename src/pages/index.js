@@ -25,7 +25,11 @@ function IndexPage() {
       <WhyChooseUs />
       <Banner>
         <div className="green-banner w-screen"></div>
-        <Hero firstLine="are you tired" secondLine="yes you are" color="text-gray-700">
+        <Hero
+          firstLine="are you tired"
+          secondLine="yes you are"
+          color="text-gray-700"
+        >
           <div className="inline-flex rounded-md shadow">
             <Button
               text="Get Started"

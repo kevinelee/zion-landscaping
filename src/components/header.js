@@ -16,7 +16,7 @@ function Header() {
   `);
 
   return (
-    <header className="bg-gray-800 sticky relative overflow-y-auto ">
+    <header className="bg-gray-800 sticky relative px-4 lg:px-2">
       <div className="flex flex-wrap items-center  justify-between  max-w-7xl md:justify-start p-4 md:px-0 mx-auto absolute sticky">
         <button
           className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
