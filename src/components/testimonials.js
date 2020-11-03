@@ -30,7 +30,7 @@ function Testimonials() {
 
   return (
     <section className="bg-gray-50  px-4 lg:px-2">
-      <h3 className="max-w-screen-xl mx-auto text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 lg:py-8 px-4 md:px-0">
+      <h3 className="max-w-screen-xl mx-auto text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 lg:py-8 ">
         Testimonials
       </h3>
       <div className="flex flex-col lg:flex-row justify-center max-w-7xl  mx-auto px-2 lg:py-8 lg:px-0 mb-4 items-center">
