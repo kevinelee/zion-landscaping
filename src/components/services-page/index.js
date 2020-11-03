@@ -69,15 +69,11 @@ const GridGallery = () => {
   );
 
   return (
-    <section className="max-w-7xl flex justify-center mx-auto">
+    <section className="max-w-7xl flex justify-center flex-col mx-auto">
+      <div className="lg:text-black text-xl text-5xl font-semibold mb-1">
+        Services
+      </div>
       <CloudinaryContext cloudName="stevelee">
-        <div
-          className={`lg:text-black text-xl mx-auto text-5xl font-semibold mb-1 px-3`}
-          // onClick={() => toggleExpansion(!isExpanded)}
-        >
-          Services
-        </div>
-
         <DropdownSelect
           initialValue={service}
           setValue={setService}
