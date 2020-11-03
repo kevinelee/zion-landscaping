@@ -22,7 +22,7 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
   return (
     <div className="lg:hidden flex flex-col mb-2 w-1/2 md:w-1/4">
       {/* <label {...getLabelProps()}>Choose an element:</label> */}
-      <button className="text-green-500 px-6 py-2 flex flex-row" type="button" {...getToggleButtonProps()}>
+      <button className="text-green-500 pl-1 pr-6 py-2 flex flex-row outline-none" type="button" {...getToggleButtonProps()}>
         {selectedItem || initialValue} 
         <ChevronIcon/>
       </button>
@@ -30,7 +30,7 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
         {isOpen &&
           items.map((item, index) => (
             <li
-              className="px-8 py-1"
+              className="pl-1 pr-6 py-2"
               // style={
               //   highlightedIndex === index ? { backgroundColor: "#bde4ff", color: "#48bb78" } : {}
               // }
