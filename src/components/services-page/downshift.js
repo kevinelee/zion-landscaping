@@ -20,7 +20,7 @@ export default function DropdownSelect({ items, setValue, initialValue = "" }) {
   }, [selectedItem]);
 
   return (
-    <div className="lg:hidden flex flex-col items-center">
+    <div className="lg:hidden flex flex-col items-center mb-2">
       {/* <label {...getLabelProps()}>Choose an element:</label> */}
       <button className="text-green-500 px-8 py-2 flex flex-row" type="button" {...getToggleButtonProps()}>
         {selectedItem || initialValue} 

@@ -3,8 +3,8 @@ import Form from "./form";
 
 function AboutUs() {
   return (
-    <div className="py-16 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-16 bg-gray-50 overflow-hidden px-4 lg:px-2">
+      <div className="max-w-7xl mx-auto">
         <div className="text-base max-w-prose mx-auto lg:max-w-none">
           <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
             About Our Company

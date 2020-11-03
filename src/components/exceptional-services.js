@@ -14,7 +14,7 @@ const Service = ({ src, title, paragraph }) => {
 
 export default function ExceptionalService() {
   return (
-    <section className=" bg-gray-50">
+    <section className=" bg-gray-50 px-2">
       <div className="max-w-screen-xl flex flex-col lg:flex-row justify-center py-8 mx-auto">
         <div className="lg:max-w-sm rounded overflow-hidden mx-2 border-4 border-gray-200 my-3 lg:mb-0">
           <div className="px-6 py-4 text-3xl">
