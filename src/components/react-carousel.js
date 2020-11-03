@@ -41,23 +41,25 @@ export default function ReactCarousel() {
       >
         <div
           className="number-slide1"
-          style={{ height: "100px", width: "100px" }}
-        ></div>
+          style={{ height: "300px", width: "500px" }}
+        >
+          Item 1
+        </div>
         <div
           className="number-slide2"
-          style={{ height: "100px", width: "100px" }}
+          style={{ height: "300px", width: "500px" }}
         >
           Item 2
         </div>
         <div
           className="number-slide3"
-          style={{ height: "100px", width: "100px" }}
+          style={{ height: "300px", width: "500px" }}
         >
           Item 3
         </div>
         <div
           className="number-slide4"
-          style={{ height: "100px", width: "100px" }}
+          style={{ height: "300px", width: "500px" }}
         >
           Item 4
         </div>
@@ -65,23 +67,3 @@ export default function ReactCarousel() {
     </div>
   );
 }
-
-// .number-slide1 {
-//   /* background-image: url("https://www.olympiclandscape.com/wp-content/uploads/walls-stone-work-01.jpg");
-//   background-size: cover; */
-//   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
-//     url("https://www.olympiclandscape.com/wp-content/uploads/walls-stone-work-01.jpg");
-//   background-size: cover;
-// }
-
-// .number-slide2 {
-//   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
-//     url("https://i.pinimg.com/originals/46/77/8b/46778bbb1eb15ebcc1972b05482478fa.jpg");
-//   background-size: cover;
-// }
-
-// .number-slide3 {
-//   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.45)),
-//     url("https://www.etlandscapingconstruction.com/wordpress/wp-content/uploads/slider-2.jpg");
-//   background-size: cover;
-// }
