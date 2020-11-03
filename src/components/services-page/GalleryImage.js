@@ -12,23 +12,25 @@ const GalleryImage = (props) => {
   return (
     <div
       onClick={pictureModal}
-      className="rounded-md grid-gallery__image m-2 lg:m-4 gap-1 cursor-pointer relative pointer-events-none md:pointer-events-auto"
+      className="rounded-md grid-gallery__image lg:my-4 cursor-pointer relative pointer-events-none md:pointer-events-auto"
     >
       <div className="grid-gallery-image-modal z-10 inset-0 absolute flex justify-center items-center text-6xl">
         +
       </div>
-      <Img
-        style={{ borderRadius: "3px" }}
-        className="rounded-md"
-        publicId={publicId}
-        cloudName={"stevelee"}
-        imageName={publicId}
-        fixed={{
-          width: 300,
-          height: 200,
-        }}
-        blurSize={60}
-      />
+      <div className="grid-gallery__images">
+        <Img
+          style={{ borderRadius: "3px" }}
+          className="rounded-md"
+          publicId={publicId}
+          cloudName={"stevelee"}
+          imageName={publicId}
+          fixed={{
+            width: 340,
+            height: 200,
+          }}
+          blurSize={60}
+        />
+      </div>
     </div>
   );
 };

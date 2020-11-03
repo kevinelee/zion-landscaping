@@ -139,7 +139,7 @@ const GridGallery = () => {
           />
         </div>
 
-        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center max-w-5xl mx-auto">
+        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center mx-auto">
           {isLoading ? (
             <div className="mx-auto text-center">Loading...</div>
           ) : isError ? (

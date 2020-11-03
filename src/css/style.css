@@ -131,11 +131,11 @@
   background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
 }
 
-.grid-gallery__image {
+.grid-gallery__images {
   transition: all 500ms ease-in-out;
 }
 
-.grid-gallery__image:hover {
+.grid-gallery__images:hover {
   opacity: 0.75;
 }
 

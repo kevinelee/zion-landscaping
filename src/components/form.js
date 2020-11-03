@@ -106,7 +106,7 @@ export default function Form() {
       {errors.inquiry && <p>Please let us know what you are interested in!</p>}
 
       <input
-        className="bg-green-600 hover:bg-green-500 cursor-pointer"
+        className="bg-green-500 hover:bg-green-500 cursor-pointer"
         type="submit"
       />
     </form>

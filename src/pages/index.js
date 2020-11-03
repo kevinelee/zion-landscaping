@@ -2,9 +2,8 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import BetterCarousel from "../components/better-carousel";
 import AboutUs from "../components/about-us";
-import Carousel from "../components/carousel";
+import ReactCarousel from "../components/react-carousel";
 import ExceptionalService from "../components/exceptional-services";
 import WhyChooseUs from "../components/why-choose-us";
 import Banner from "../components/banner";
@@ -20,7 +19,7 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
-      <Carousel />
+      <ReactCarousel />
       <AboutUs />
       <WhyChooseUs />
       <Banner>

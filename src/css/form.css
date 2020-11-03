@@ -51,21 +51,14 @@ label {
 
 form > button[type="submit"],
 form > input[type="submit"] {
-  /* background: #ec5990;   */
   color: white;
-  text-transform: uppercase;
   border: none;
   margin-top: 2rem;
   padding: 20px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 100;
-  letter-spacing: 10px;
-}
 
-/* button[type="submit"]:hover,
-input[type="submit"]:hover {
-  background: #bf1650;
-} */
+}
 
 form > button[type="submit"]:active,
 form > input[type="button"]:active,
@@ -105,18 +98,7 @@ form > button {
   margin-top: 40px;
   border: 1px solid #333;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  
   padding: 10px 20px;
   border-radius: 4px;
 }
-
-/* button[type="button"] {
-  display: block;
-  appearance: none;
-  background: #333;
-  color: black;
-  border: none;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 4px;
-} */
