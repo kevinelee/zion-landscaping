@@ -13,7 +13,7 @@ import GalleryImage from "./GalleryImage";
 
 const GridGallery = () => {
   const [publicId, setPublicId] = useState(null);
-  const [isExpanded, toggleExpansion] = useState(false);
+  // const [isExpanded, toggleExpansion] = useState(false);
   const [service, setService] = useState("Patio");
 
   const services = [
@@ -33,7 +33,7 @@ const GridGallery = () => {
 
   const handleSelect = (e) => {
     e.preventDefault();
-    toggleExpansion(!isExpanded);
+    // toggleExpansion(!isExpanded);
     setService(e.target.id);
   };
 
@@ -68,6 +68,8 @@ const GridGallery = () => {
     fetchData
   );
 
+  console.log(service)
+
   return (
     <section className="max-w-7xl flex justify-center flex-col mx-auto">
       <div className="lg:text-black text-xl text-5xl font-semibold mb-1">
@@ -80,73 +82,64 @@ const GridGallery = () => {
           items={services}
         />
 
-        {/* <DropDown services={ServicesArr} /> */}
-
-        {/* <div
-          className={`block text-green-500
-           lg:hidden text-center mt-4 mb-3`}
-        >
-          {service}
-        </div> */}
-
-        <div className={`hidden lg:block flex flex-col text-center `}>
+        <div className={`hidden lg:flex text-center justify-around`}>
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "patio"}
+            isActive={service === "Patio"}
             value="patio"
             svc="Patio"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "front-yard"}
+            isActive={service === "Front Yard"}
             value="front-yard"
             svc="Front Yard"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "driveway"}
+            isActive={service === "Driveway"}
             value="driveway"
             svc="Driveway"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "fire-place"}
+            isActive={service === "Fire Place"}
             value="fire-place"
             svc="Fire Place"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "patio-cover"}
+            isActive={service === "Patio Cover"}
             value="patio-cover"
             svc="Patio Cover"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "putting-green"}
+            isActive={service === "Putting Green"}
             value="putting-green"
             svc="Putting Green"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "barbeque"}
+            isActive={service === "Barbecue"}
             value="barbeque"
             svc="Barbecue"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "pool-deck"}
+            isActive={service === "Pool Deck"}
             value="pool-deck"
             svc="Pool Deck"
           />
           <ServicesButton
             handleSelect={handleSelect}
-            isActive={service === "fountain"}
+            isActive={service === "Fountain"}
             value="fountain"
             svc="Fountain"
           />
         </div>
 
-        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+        <div className="grid-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center">
           {isLoading ? (
             <div className="mx-auto text-center">Loading...</div>
           ) : isError ? (
@@ -168,7 +161,7 @@ const GridGallery = () => {
         {isOpen && publicId ? (
           <Modal>
             <div className="flex justify-end p-2" onClick={closeModal}>
-              <CloseIcon className="w-6 h-6" fill="black" />
+              <CloseIcon className="w-6 h-6 cursor-pointer" fill="white" />
             </div>
             <div style={{ width: "100%", textAlign: "center" }}>
               <Img
