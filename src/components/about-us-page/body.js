@@ -45,7 +45,7 @@ export default function Body() {
           <br />
           <Button
             text="Get Started"
-            extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline w-1/4"
+            extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline w-36"
             href="/contact"
           />
         </div>
