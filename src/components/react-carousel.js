@@ -1,16 +1,18 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Hero from "./hero";
+import Buttons from "./Button";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    items: 1,
+    slidesToSlide: 1, // optional, default to 1.
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -32,35 +34,40 @@ export default function ReactCarousel() {
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         keyBoardControl={true}
-        customTransition="all .5"
+        customTransition="transform 700ms ease-in-out"
         transitionDuration={500}
         containerClass="carousel-container"
+        // removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
         <div
-          className="number-slide1"
-          style={{ height: "300px", width: "500px" }}
+          className="number-slide1 object-contain"
+          style={{ width: "100vw", height: "70vh" }}
         >
-          Item 1
+          <Hero
+            firstLine="Do you like what you see?"
+            secondLine="Give us a call!"
+          >
+            <Buttons />
+          </Hero>
+          <Buttons />
         </div>
         <div
           className="number-slide2"
-          style={{ height: "300px", width: "500px" }}
+          style={{ width: "100vw", height: "70vh" }}
         >
-          Item 2
+          <Hero firstLine="Please." secondLine="Give us a call!">
+            <Buttons />
+          </Hero>
         </div>
         <div
           className="number-slide3"
-          style={{ height: "300px", width: "500px" }}
+          style={{ width: "100vw", height: "70vh" }}
         >
-          Item 3
-        </div>
-        <div
-          className="number-slide4"
-          style={{ height: "300px", width: "500px" }}
-        >
-          Item 4
+          <Hero firstLine="We're begging you!" secondLine="Give us a call!">
+            <Buttons />
+          </Hero>
         </div>
       </Carousel>
     </div>
