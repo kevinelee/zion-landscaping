@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Hero from "./hero";
-import Buttons from "./Button";
+import Button from "./Button";
 
 const responsive = {
   desktop: {
@@ -19,6 +19,25 @@ const responsive = {
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
+};
+
+const Buttons = () => {
+  return (
+    <>
+      <div className="inline-flex rounded-md shadow">
+        <Button
+          text="Get Started"
+          extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline"
+        />
+      </div>
+      <div className="rounded-md shadow ml-4">
+        <Button
+          text="Learn More"
+          extraClasses="w-full flex text-green-600 bg-white hover:text-green-500 focus:outline-none focus:border-green-300 focus:shadow-outline-green"
+        />
+      </div>
+    </>
+  );
 };
 
 import React from "react";
@@ -48,16 +67,20 @@ export default function ReactCarousel() {
           <Hero
             firstLine="Do you like what you see?"
             secondLine="Give us a call!"
+            extraClasses="md:text-5xl md:leading-10"
           >
             <Buttons />
           </Hero>
-          <Buttons />
         </div>
         <div
           className="number-slide2"
           style={{ width: "100vw", height: "70vh" }}
         >
-          <Hero firstLine="Please." secondLine="Give us a call!">
+          <Hero
+            firstLine="Please."
+            secondLine="Give us a call!"
+            extraClasses="md:text-5xl lg:leading-10"
+          >
             <Buttons />
           </Hero>
         </div>
@@ -65,7 +88,11 @@ export default function ReactCarousel() {
           className="number-slide3"
           style={{ width: "100vw", height: "70vh" }}
         >
-          <Hero firstLine="We're begging you!" secondLine="Give us a call!">
+          <Hero
+            firstLine="We're begging you!"
+            secondLine="Give us a call!"
+            extraClasses="md:text-5xl lg:leading-10"
+          >
             <Buttons />
           </Hero>
         </div>
