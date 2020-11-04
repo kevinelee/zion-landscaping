@@ -71,7 +71,7 @@ const GridGallery = () => {
   console.log(service);
 
   return (
-    <section className="max-w-7xl flex justify-center flex-col mx-auto px-4 lg:px-2 pb-8">
+    <section className="max-w-7xl flex justify-center flex-col mx-auto px-4 lg:px-2 py-8">
       <div className="lg:text-black text-xl text-5xl font-semibold mb-1">
         Services
       </div>
