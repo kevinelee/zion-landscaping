@@ -68,10 +68,10 @@ const GridGallery = () => {
     fetchData
   );
 
-  console.log(service)
+  console.log(service);
 
   return (
-    <section className="max-w-7xl flex justify-center flex-col mx-auto">
+    <section className="max-w-7xl flex justify-center flex-col mx-auto px-4 lg:px-2 pb-8">
       <div className="lg:text-black text-xl text-5xl font-semibold mb-1">
         Services
       </div>
@@ -82,7 +82,9 @@ const GridGallery = () => {
           items={services}
         />
 
-        <div className={`hidden lg:flex text-center justify-around max-w-5xl mx-auto`}>
+        <div
+          className={`hidden lg:flex text-center justify-around max-w-5xl mx-auto`}
+        >
           <ServicesButton
             handleSelect={handleSelect}
             isActive={service === "Patio"}

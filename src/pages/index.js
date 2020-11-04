@@ -22,7 +22,7 @@ function IndexPage() {
       <ReactCarousel />
       <AboutUs />
       <WhyChooseUs />
-      <Banner>
+      <Banner height="h-96">
         <div className="green-banner w-screen"></div>
         <Hero
           firstLine="are you tired"

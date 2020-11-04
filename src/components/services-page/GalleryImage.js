@@ -11,6 +11,7 @@ const GalleryImage = (props) => {
 
   return (
     <div
+    
       onClick={pictureModal}
       className="rounded-md grid-gallery__image lg:my-4 cursor-pointer relative pointer-events-none md:pointer-events-auto"
     >

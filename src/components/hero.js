@@ -7,6 +7,7 @@ const Hero = ({
   children,
   color = "text-white",
   extraClasses,
+  margin = "mt-8"
 }) => {
   return (
     <div className="max-w-screen-xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8 inset-0 absolute flex flex-col justify-center">
@@ -15,10 +16,10 @@ const Hero = ({
       >
         {firstLine}
         <br />
-        <br className="hidden md:flex"/>
+        <br className="hidden md:flex" />
         {secondLine}
       </h2>
-      <div className="mt-8 flex justify-center">{children}</div>
+      <div className={`${margin} flex justify-center`}>{children}</div>
     </div>
   );
 };
