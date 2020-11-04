@@ -2,9 +2,9 @@ import React from "react";
 
 const Service = ({ src, title, paragraph }) => {
   return (
-    <div className="lg:max-w-sm rounded overflow-hidden mx-2 my-3 lg:mb-0">
+    <div className="lg:max-w-sm rounded overflow-hidden mx-2 my-3 lg:mb-0 ">
       <img className="w-full" src={src} alt="Sunset in the mountains" />
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 border-gray-200 border-b-4 border-l-4 border-r-4 rounded-md">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-gray-700 text-base">{paragraph}</p>
       </div>
