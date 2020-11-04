@@ -53,7 +53,7 @@ export default function ReactCarousel() {
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         keyBoardControl={true}
-        customTransition="transform 700ms ease-in-out"
+        customTransition="transform 500ms ease-in-out"
         transitionDuration={500}
         containerClass="carousel-container"
         // removeArrowOnDeviceType={["tablet", "mobile"]}

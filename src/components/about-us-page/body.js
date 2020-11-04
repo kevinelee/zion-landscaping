@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import Button from "../Button";
 
 export default function Body() {
   const YearBox = ({ year, title, paragraph }) => {
@@ -42,7 +43,11 @@ export default function Body() {
           </p>
 
           <br />
-          <a href="/">GET IN TOUCH</a>
+          <Button
+            text="Get Started"
+            extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline w-36"
+            href="/contact"
+          />
         </div>
 
         <img

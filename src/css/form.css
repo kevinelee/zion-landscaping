@@ -2,14 +2,6 @@ form {
   max-width: 500px;
   margin: 0 auto;
 }
-/* 
-h1 {
-  font-weight: 100;
-  color: white;
-  text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgb(79, 98, 148);
-} */
 
 .form {
   background: #0e101c;
@@ -54,10 +46,7 @@ form > input[type="submit"] {
   color: white;
   border: none;
   margin-top: 2rem;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: 100;
-
+  padding: 20px;  
 }
 
 form > button[type="submit"]:active,
@@ -98,7 +87,6 @@ form > button {
   margin-top: 40px;
   border: 1px solid #333;
   margin-bottom: 20px;
-  
   padding: 10px 20px;
   border-radius: 4px;
 }

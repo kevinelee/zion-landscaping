@@ -13,12 +13,17 @@ function AboutPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="About"
       />
+      <img
+        className="object-contain lg:hidden flex"
+        src="https://www.houselogic.com/wp-content/uploads/2010/03/landscape-curb-appeal-retina_retina_f09021ca6edac80b70f3a5b5092c4059.jpg"
+        alt="landscaping"
+      />
 
-      <section className="max-w-7xl mx-auto px-4 lg:px-2">
+      <div className="max-w-7xl mx-auto px-4 lg:px-2">
         <Body />
         <Landscapers />
         <Stats />
-      </section>
+      </div>
     </Layout>
   );
 }

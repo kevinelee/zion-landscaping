@@ -54,7 +54,7 @@ function AboutUs() {
           </div>
 
           <div className="relative text-base mx-auto w-full">
-            <h3 className="text-center text-3xl mb-2">Request an Estimate!</h3>
+            <h3 className="text-center text-3xl mb-2 font-semibold">Request an Estimate!</h3>
             <Form />
           </div>
         </div>

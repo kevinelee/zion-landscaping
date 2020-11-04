@@ -40,7 +40,7 @@ export default function Form() {
   return (
     <form
       data-netlify="true"
-      onSubmit={()=>handleSubmit()}
+      onSubmit={() => handleSubmit()}
       name="contact"
       method="post"
       action="/"
@@ -55,6 +55,7 @@ export default function Form() {
         onChange={handleChange}
         value={formState.firstName}
         ref={register({ required: true, maxLength: 80 })}
+        required
       />
       {errors.firstName && <p className="mb-3">This field is required</p>}
 
@@ -67,6 +68,7 @@ export default function Form() {
         onChange={handleChange}
         value={formState.lastName}
         ref={register({ required: true, maxLength: 100 })}
+        required
       />
       {errors.lastName && <p className="mb-3">This field is required</p>}
 
@@ -79,6 +81,7 @@ export default function Form() {
         onChange={handleChange}
         value={formState.phone}
         ref={register({ required: true, minLength: 10, maxLength: 12 })}
+        required
       />
       {errors.phone && <p className="mb-3">Please enter valid phone number</p>}
 
@@ -91,6 +94,7 @@ export default function Form() {
         onChange={handleChange}
         value={formState.email}
         ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+        required
       />
       {errors.email && <p className="mb-3">Please enter valid email</p>}
 
@@ -102,11 +106,12 @@ export default function Form() {
         placeholder="Inquiry"
         onChange={handleChange}
         value={formState.inquiry}
+        required
       />
       {errors.inquiry && <p>Please let us know what you are interested in!</p>}
 
       <input
-        className="bg-green-500 hover:bg-green-500 cursor-pointer"
+        className="bg-green-500 hover:bg-green-500 cursor-pointer text-2xl font-semibold"
         type="submit"
       />
     </form>
