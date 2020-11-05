@@ -30,7 +30,7 @@ function Testimonials() {
 
   return (
     <section className="bg-gray-50  px-4 lg:px-2">
-      <h3 className="max-w-screen-xl mx-auto text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 lg:py-8 ">
+      <h3 className="max-w-screen-xl mx-auto text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 lg:pb-8 ">
         Testimonials
       </h3>
       <div className="flex flex-col lg:flex-row justify-center max-w-7xl  mx-auto px-2 lg:pb-8 lg:px-0 mb-4 items-center">
@@ -41,7 +41,7 @@ function Testimonials() {
                   <div
                     key={testimonial.name}
                     onClick={() => setTestimonial(testimonial)}
-                    className="h-16 flex justify-center items-center border-2 m-2 hover:border-gray-400  rounded-md px-4 cursor-pointer"
+                    className={`${testimonial !== testimonial ? "blur" : null} h-16 flex justify-center items-center border-2 m-2 hover:border-green-500 rounded-md px-4 cursor-pointer`}
                   >
                     <img
                       src={testimonial.image}
