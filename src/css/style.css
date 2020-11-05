@@ -147,3 +147,8 @@
   opacity: 1;
   transition: all 500ms ease-in-out;
 }
+
+.blur {
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
