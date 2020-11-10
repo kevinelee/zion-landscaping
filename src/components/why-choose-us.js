@@ -37,7 +37,7 @@ function twoByTwo() {
           <div className="mt-10 sm:grid sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 lg:col-span-2">
             <Skills
               iconSvg={<GlobeIcon />}
-              title="Specialized Company"
+              title="Innovative Landscape Design"
               paragraph="We are a landscaping company that specializes in residential
                   and commercial landscaping"
             />

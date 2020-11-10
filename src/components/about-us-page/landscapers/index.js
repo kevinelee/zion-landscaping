@@ -1,37 +1,37 @@
 import React from "react";
-import Jimmy from "../../../images/jimmy butler.png";
-import Devin from "../../../images/devin booker.png";
-import Lebron from "../../../images/lebron james.png";
+import Paul from "../../../images/paul.png";
+import Sam from "../../../images/sam.jpg";
+import Simon from "../../../images/simon.jpg";
 import Landscaper from "../landscapers/landscaper";
 
 export default function Landscapers() {
   const landscapers = [
     {
-      firstName: "Jimmy",
-      lastName: "Butler",
+      firstName: "Paul",
+      lastName: "Yoo",
       bio:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non dui dolor. Aliquam feugiat ipsum eu lorem pharetra, nec euismod odio fringilla. Vestibulum ornare efficitur.",
-      image: Jimmy,
+      image: Paul,
     },
     {
-      firstName: "Devin",
-      lastName: "Booker",
+      firstName: "Samuel",
+      lastName: "Yoo",
       bio:
         "Quisque nunc libero, tempus sit amet ullamcorper porttitor, malesuada eget justo. Pellentesque tincidunt quam leo, ac ultricies dolor imperdiet eu. Etiam consequat bibendum augue, vitae.",
-      image: Devin,
+      image: Sam,
     },
     {
-      firstName: "Lebron",
-      lastName: "James",
+      firstName: "Simon",
+      lastName: "Yoo",
       bio:
         "Aenean commodo euismod tellus, id vehicula arcu vestibulum vitae. Cras tempor tortor purus, in tincidunt justo molestie sed. Phasellus vel blandit lectus. Sed quis massa.",
-      image: Lebron,
+      image: Simon
     },
   ];
 
   return (
     <section>
-      <div className="relative bg-gray-50 py-16 px-4 sm:px-6  lg:px-0">
+      <div className="relative py-16 px-4 sm:px-6  lg:px-0">
         <div className="absolute inset-0">
           <div className="bg-white h-1/3 sm:h-2/3"></div>
         </div>
@@ -43,7 +43,12 @@ export default function Landscapers() {
 
             {landscapers.map((ls)=>{
               return (
-                <Landscaper key={ls.firstName} src={ls.image} alt={ls.firstName} name={`${ls.firstName} ${ls.lastName}`} bio={ls.bio}/>
+                <Landscaper 
+                  key={ls.firstName} 
+                  src={ls.image} 
+                  alt={ls.firstName} 
+                  name={`${ls.firstName} ${ls.lastName}`} 
+                  bio={ls.bio}/>
               )
             })}
 

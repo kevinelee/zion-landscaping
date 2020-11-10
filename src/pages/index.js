@@ -16,8 +16,8 @@ function IndexPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
+        keywords={[`zion`, `landscaping`, `los Angeles`, `orange county`]}
+        title="Zion Landscaping | Home"
       />
       <ReactCarousel />
       <AboutUs />
@@ -25,8 +25,8 @@ function IndexPage() {
       <Banner height="h-96">
         <div className="green-banner w-screen"></div>
         <Hero
-          firstLine="are you tired"
-          secondLine="yes you are"
+          firstLine="Want to start your next landscaping project?"
+          secondLine="Talk to our team to get an estimate!"
           color="text-gray-700"
         >
           <div className="inline-flex rounded-md shadow">

@@ -21,26 +21,13 @@ export default function Body() {
     <section>
       <div className="flex justify-center py-8">
         <div className="flex flex-col justify-center ">
-          <h1 className="text-5xl font-semibold">We Are The Landscaper</h1>
+          <h1 className="text-5xl font-semibold">We Are Zion Landscaping</h1>
           <br />
           <p>
-            The landscaper is a full-service landscaping company with a
-            straightforward and unique design/build philosophy. We believe in
-            having one landscape designer handle the job from its conception on
-            paper, to the realization on your property. The reason; by doing
-            this you are able to communicate and work with a single individual
-            where you can share your thoughts and ideas with to bring them to
-            life.
+            {`We pride ourselves in superior workmanship, excellent customer service, and an endless commitment to detail. Our mission is to provide industry-leading customer satisfaction and quality service. To accomplish this mission, we base our company on the following principles: We cater to our clientele's discriminating tastes by offering a wide range of exceptional products and services. We believe strong customer communication is one of the keys to a successful project. We maintain a highly professional staff that understands and responds to customers' needs in a friendly, personal manner. We create a "sense of place" - an environment in which people may entertain, play or just relax. We constantly strive to have your installation completed on time and with minimal inconvenience.`}
           </p>
 
           <br />
-
-          <p>
-            the landscaper is made up of a group of highly skilled landscaping
-            professionals who pays a lot of attention to small details. In the
-            30+ years of experience, our staff keep your pretty looking and
-            functioning beautifully.
-          </p>
 
           <br />
           <Button

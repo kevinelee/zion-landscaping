@@ -77,7 +77,7 @@ export default function ReactCarousel() {
           style={{ width: "100vw", height: "70vh" }}
         >
           <Hero
-            firstLine="Please."
+            firstLine="Need an estimate?"
             secondLine="Give us a call!"
             extraClasses="md:text-5xl lg:leading-10"
           >
@@ -89,7 +89,7 @@ export default function ReactCarousel() {
           style={{ width: "100vw", height: "70vh" }}
         >
           <Hero
-            firstLine="We're begging you!"
+            firstLine="Third slide"
             secondLine="Give us a call!"
             extraClasses="md:text-5xl lg:leading-10"
           >

@@ -10,8 +10,8 @@ function AboutPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="About"
+        keywords={[`zion`, `landscaping`]}
+        title="About Zion Landscaping"
       />
       <img
         className="object-contain lg:hidden flex"

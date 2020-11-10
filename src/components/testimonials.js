@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-import Jimmy from "../images/jimmy butler.png";
-import Devin from "../images/devin booker.png";
-import Lebron from "../images/lebron james.png";
 import QuotationSVG from "./Svg/QuotationSVG";
 
 function Testimonials() {
   const testimonials = [
     {
-      name: "Jimmy Butler",
+      name: "Rosi M. - Irvine",
       comments:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non dui dolor. Aliquam feugiat ipsum eu lorem pharetra, nec euismod odio fringilla. Vestibulum ornare efficitur.",
-      image: Jimmy,
+        "Paul was honest with his estimate and managed our expectations as we had never built out a backyard before",
     },
     {
-      name: "Devin Booker",
+      name: "Jm M. - Lake Forrest",
       comments:
-        "Quisque nunc libero, tempus sit amet ullamcorper porttitor, malesuada eget justo. Pellentesque tincidunt quam leo, ac ultricies dolor imperdiet eu. Etiam consequat bibendum augue, vitae.",
-      image: Devin,
+        "Zion landscaping is excellent. They installed our entire yard for a new home. We are very pleased. Good attention to detail and craftsmanship. They worked steadily and answered our questions throughout. Paul is responsive and insightful.",
     },
     {
-      name: "Lebron James",
+      name: "Amie L. - Mission Viejo",
       comments:
-        "Aenean commodo euismod tellus, id vehicula arcu vestibulum vitae. Cras tempor tortor purus, in tincidunt justo molestie sed. Phasellus vel blandit lectus. Sed quis massa.",
-      image: Lebron,
+        "Zion not only provided the best price, but also were excellent to work with. We plan on having them tackle other house projects in the future and have already gotten their bid on other renovations to our home.",
     },
   ];
 
@@ -43,11 +37,6 @@ function Testimonials() {
                     onClick={() => setTestimonial(testimonial)}
                     className={`${testimonial !== testimonial ? "blur" : null} h-16 flex justify-center items-center border-2 m-2 hover:border-green-500 rounded-md px-4 cursor-pointer`}
                   >
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="h-12 w-12 object-cover rounded-full"
-                    />
                     <span className="hidden md:block">{testimonial.name}</span>
                   </div>
                 );
