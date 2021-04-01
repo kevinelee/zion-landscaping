@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <header className="bg-gray-800 sticky relative lg:px-2">
-      <div className="flex flex-wrap items-center  justify-between  max-w-7xl md:justify-start p-4 md:px-2 mx-auto absolute sticky">
+      <div className="flex flex-wrap items-center  justify-between  max-w-7xl  p-4 md:px-2 mx-auto absolute sticky">
         <button
           className="items-center block px-3 py-2 text-white border border-white hover:border-gray-400  rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
@@ -69,6 +69,20 @@ function Header() {
               {link.title}
             </Link>
           ))}
+          <a
+            className="inline-flex mt-4 text-white hover:text-gray-400 no-underline md:mt-0 md:ml-4 font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out rounded-md text-base px-3 py-2"
+            href="tel:+1-714-3132341"
+          >
+            <span className="mr-2">Call Us</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="h-5"
+            >
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+          </a>
         </nav>
       </div>
     </header>
