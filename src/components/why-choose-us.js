@@ -23,7 +23,7 @@ const Skills = ({ iconSvg, title, paragraph }) => {
 
 function twoByTwo() {
   return (
-    <div className="bg-gray-50 overflow-hidden  px-4 lg:px-2">
+    <div className="overflow-hidden  px-4 lg:px-2">
       <div className="relative max-w-screen-xl mx-auto py-8">
         <Dots />
 

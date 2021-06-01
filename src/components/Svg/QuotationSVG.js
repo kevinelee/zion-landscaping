@@ -3,7 +3,7 @@ import React from "react";
 export default function QuotationSVG() {
   return (
     <svg
-      className="absolute z-10 transform -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-600 opacity-25 "
+      className="absolute z-10 transform -translate-x-3 -translate-y-2 h-8 w-8 text-green-400 opacity-25 "
       fill="currentColor"
       viewBox="0 0 32 32"
     >

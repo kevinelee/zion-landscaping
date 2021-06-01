@@ -32,14 +32,14 @@
                 aria-orientation="vertical"
                 aria-labelledby="options-menu"
               >
-                <ServicesButton value="patio" service="Patio" />
-                <ServicesButton value="front-yard" service="Front Yard" />
-                <ServicesButton value="driveway" service="Driveway" />
-                <ServicesButton value="patio-cover" service="Patio Cover" />
-                <ServicesButton value="putting-green" service="Putting Green" />
-                <ServicesButton value="barbeque" service="Barbecue" />
-                <ServicesButton value="pool-deck" service="Pool Deck" />
-                <ServicesButton value="fountain" service="Fountain" />
+                <ServicesButton value="patio" services="Patio" />
+                <ServicesButton value="front-yard" services="Front Yard" />
+                <ServicesButton value="driveway" services="Driveway" />
+                <ServicesButton value="patio-cover" services="Patio Cover" />
+                <ServicesButton value="putting-green" services="Putting Green" />
+                <ServicesButton value="barbeque" services="Barbecue" />
+                <ServicesButton value="pool-deck" services="Pool Deck" />
+                <ServicesButton value="fountain" services="Fountain" />
               </div>
             </div>
           </div>
