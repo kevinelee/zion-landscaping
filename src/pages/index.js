@@ -2,103 +2,138 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import AboutUs from "../components/about-us";
 // import ReactCarousel from "../components/react-carousel";
-import ExceptionalService from "../components/exceptional-services";
+// import ExceptionalService from "../components/exceptional-services";
 import WhyChooseUs from "../components/why-choose-us";
 import Banner from "../components/banner";
 import Testimonials from "../components/testimonials";
+import {ParallaxBanner} from "react-scroll-parallax";
 // import Hero from "../components/hero";
 // import Button from "../components/Button";
 // import Hours from "../components/hours";
 
 function IndexPage() {
-  return (
-    <Layout>
-      <SEO
-        keywords={[`zion`, `landscaping`, `los Angeles`, `orange county`]}
-        title="Zion Landscaping | Home"
-      />
-      {/* <ReactCarousel /> */}
-      <AboutUs />
-      <WhyChooseUs />
-      <Banner height="h-96">
-        {/* <div className="green-banner w-screen"></div>
-        <Hero
-          firstLine="Want to start your next landscaping project?"
-          secondLine="Talk to our team to get an estimate!"
-          color="text-gray-700"
-        >
-          <div className="inline-flex rounded-md shadow">
-            <Button
-              text="Get Started"
-              extraClasses="inline-flex text-white bg-green-600 hover:bg-green-500 focus:shadow-outline"
+    return (
+        <Layout>
+            <SEO
+                keywords={[`zion`, `landscaping`, `los Angeles`, `orange county`]}
+                title="Zion Landscaping | Home"
             />
-          </div>
-          <div className="rounded-md shadow ml-4">
-            <Button
-              text="Learn More"
-              extraClasses="w-full flex text-green-600 bg-white hover:text-green-500 focus:outline-none focus:border-green-300 focus:shadow-outline-green"
-            />
-          </div>
-        </Hero> */}
-      </Banner>
-      <ExceptionalService />
-      <Testimonials />
-      {/* <Hours/> */}
-      <div className="relative bg-gray-900">
-        <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-          <img
-            className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixqx=HUAB3P7Cex&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100"
-            alt=""
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600"
-            style={{ mixBlendMode: "multiply" }}
-          />
-        </div>
-        <div className="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
-          <div className="md:ml-auto md:w-1/2 md:pl-10">
-            <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-              Award winning support
-            </h2>
-            <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-              We’re here to help
-            </p>
-            <p className="mt-3 text-lg text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              egestas tempus tellus etiam sed. Quam a scelerisque amet
-              ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-              quisque ut interdum tincidunt duis.
-            </p>
-            <div className="mt-8">
-              <div className="inline-flex rounded-md shadow">
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50"
+            <div className="max-w-7xl mx-auto">
+                <ParallaxBanner
+                    className="your-class"
+                    layers={[
+                        {
+                            image: 'https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixqx=HUAB3P7Cex&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100',
+                            amount: 0.8,
+                        },
+                    ]}
+                    style={{
+                        height: '500px',
+                    }}
                 >
-                  Visit the help center
-                  {/* Heroicon name: solid/external-link */}
-                  <svg
-                    className="-mr-1 ml-3 h-5 w-5 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                  </svg>
-                </a>
-              </div>
+                    <div
+                        className="font-bold top-0 left-0 right-0 bottom-0 flex-col flex items-center justify-center absolute text-3xl lg:text-6xl text-white">
+                        <div>Professional Landscape</div>
+                        <div>Design & Construction</div>
+                    </div>
+
+                </ParallaxBanner>
             </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
+            <div className="max-w-7xl mx-auto">
+                <div className="relative pt-16 pb-16 overflow-hidden">
+                    <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48"/>
+                    <div className="relative">
+                        <div
+                            className="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                            <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                                <div>
+                                    <div>
+
+                                    </div>
+                                    <div className="mt-6">
+                                        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                                            We Are Zion Landscaping
+                                        </h2>
+                                        <p className="mt-4 text-lg text-gray-500">
+                                            We transform any imagination into a vision through our design and
+                                            consultation. With our expertise and experience we will make that vision
+                                            into an unparalleled paradise. Contact us to start envisioning your dream
+                                            home!
+                                        </p>
+                                        <div className="mt-6">
+                                            <a
+                                                href="#"
+                                                className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-400 hover:bg-green-50 hover:text-green-400 hover:border-green-400"
+                                            >
+                                                Get a free estimate
+                                            </a>
+                                        </div>
+                                        <div className="mt-6">
+                                            <a
+                                                href="#"
+                                                className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-green-400 bg-white hover:bg-green-400 hover:text-white border-green-400"
+                                            >
+                                                More about us
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-12 sm:mt-16 lg:mt-0">
+                                <div className="-mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                    <ParallaxBanner
+                                        className="your-class"
+                                        layers={[
+                                            {
+                                                image: 'https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixqx=HUAB3P7Cex&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100',
+                                                amount: 0.8,
+                                            },
+                                        ]}
+                                        style={{
+                                            height: '500px',
+                                        }}
+                                    >
+                                    </ParallaxBanner>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <WhyChooseUs/>
+            <Banner height="h-96">
+                <ParallaxBanner
+                    className="your-class"
+                    layers={[
+                        {
+                            image: 'https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixqx=HUAB3P7Cex&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100',
+                            amount: 0.8,
+                        },
+                    ]}
+                    style={{
+                        height: '100%',
+                    }}
+                >
+                    <div
+                        className="top-0 left-0 right-0 bottom-0 flex-col flex items-center justify-center absolute text-3xl lg:text-6xl text-white">
+                        <a
+                            href="#"
+                            className="text-xl inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-400 hover:bg-green-50 hover:text-green-400 hover:border-green-400"
+                        >
+                            Get a free estimate
+                        </a>
+                    </div>
+
+                </ParallaxBanner>
+            </Banner>
+            {/*<ExceptionalService />*/}
+            <Testimonials/>
+            {/* <Hours/> */}
+        </Layout>
+    );
 }
 
 export default IndexPage;
