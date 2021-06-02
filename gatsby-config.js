@@ -11,6 +11,26 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-eslint`,
+        {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    formats: [`auto`, `webp`],
+                    placeholder: `dominantColor`,
+                    quality: 50,
+                    breakpoints: [750, 1080, 1366, 1920],
+                    backgroundColor: `transparent`,
+                    tracedSVGOptions: {},
+                    blurredOptions: {},
+                    jpgOptions: {},
+                    pngOptions: {},
+                    webpOptions: {},
+                    avifOptions: {},
+                }
+            }
+        },
+        `gatsby-transformer-sharp`,
+        'gatsby-plugin-image',
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-manifest`,
@@ -47,37 +67,6 @@ module.exports = {
                     if (name === `services`) {
                         return `Service`
                     }
-                    // if (name === `patio`) {
-                    //     return `Patio`
-                    // }
-                    // if (name === `front-yard`) {
-                    //     return `Front-yard`
-                    // }
-                    // if (name === `driveway`) {
-                    //     return `Driveway`
-                    // }
-                    // if (name === `fireplace`) {
-                    //     return `Fireplace`
-                    // }
-                    // if (name === `patio-cover`) {
-                    //     return `Patio-cover`
-                    // }
-                    // if (name === `putting-green`) {
-                    //     return `Putting-green`
-                    // }
-                    // if (name === `barbeque`) {
-                    //     return `Barbeque`
-                    // }
-                    // if (name === `fire-place`) {
-                    //     return `Fire-place`
-                    // }
-                    // if (name === `pool-deck`) {
-                    //     return `Pool-deck`
-                    // }
-                    // if (name === `fountain`) {
-                    //     return `Fountain`
-                    // }
-
                     return name
                 },
             },
@@ -89,68 +78,5 @@ module.exports = {
                 name: `services`,
             },
         },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/front-yard`,
-        //         name: `front-yard`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/driveway`,
-        //         name: `driveway`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/fire-place`,
-        //         name: `fire-place`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/patio-cover`,
-        //         name: `patio-cover`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/putting-green`,
-        //         name: `putting-green`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/barbeque`,
-        //         name: `barbeque`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/pool-deck`,
-        //         name: `pool-deck`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/fire-place`,
-        //         name: `fire-place`,
-        //     },
-        // },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         path: `${__dirname}/services/fountain`,
-        //         name: `fountain`,
-        //     },
-        // },
     ],
 };
